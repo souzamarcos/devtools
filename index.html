@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Itens</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 0.8rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        #filter {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <button onclick="switchLang('pt')">PT</button>
+        <button onclick="switchLang('en')">EN</button>
+    </div>
+    <nav>
+        <a href="index.html" data-i18n="tools">Outras ferramentas</a>
+    </nav>
+    <h1 data-i18n="toolsTitle">Lista de Itens</h1>
+    <input type="text" id="filter" placeholder="Filtrar itens..." data-placeholder-i18n="filterPlaceholder" />
+    <table>
+        <thead>
+            <tr>
+                <th data-i18n="item">Item</th>
+                <th data-i18n="description">Descrição</th>
+            </tr>
+        </thead>
+        <tbody id="itemTable">
+            <tr>
+                <td><a href="gerador-cpf.html" data-i18n="items[0].name">Gerador CPF</a></td>
+                <td><a href="gerador-cpf.html" data-i18n="items[0].description">Descrição do Item 1</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="js/general.js"></script>
+<script>
+    const i18n = {
+        pt: {
+            tools: "Outras ferramentas",
+            toolsTitle: "Lista de Itens",
+            filterPlaceholder: "Filtrar itens...",
+            item: "Item",
+            description: "Descrição",
+            items: [
+                {
+                    name: "Gerador de CPF",
+                    description: "Ferramenta para gerar CPF válido."
+                },
+                {
+                    name: "Validador de CPF",
+                    description: "Ferramenta para validar CPF"
+                }
+            ]
+        },
+        en: {
+            tools: "Other tools",
+            toolsTitle: "Item List",
+            filterPlaceholder: "Filter items...",
+            item: "Item",
+            description: "Description",
+            items: [
+                {
+                    name: "CPF Generator",
+                    description: "Tool to generate valid Brazilian CPF"
+                },
+                {
+                    name: "CPF Validator",
+                    description: "Tool to validate CPF."
+                }
+            ]
+        }
+    };
+
+    window.onload = () => {
+        switchLang('pt');
+        document.getElementById('filter').addEventListener('input', filterTable);
+    };
+
+    function filterTable() {
+        const filter = document.getElementById('filter').value.toLowerCase();
+        const rows = document.querySelectorAll('#itemTable tr');
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            const match = Array.from(cells).some(cell => cell.textContent.toLowerCase().includes(filter));
+            row.style.display = match ? '' : 'none';
+        });
+    }
+</script>
+</body>
+</html>

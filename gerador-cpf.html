@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de CPF</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1 {
+          text-align: center;
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+        .gerar-cpf button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 0.6rem 1.2rem;
+          font-size: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #0056b3;
+        }
+        #cpf {
+          margin-top: 1rem;
+          font-size: 1.5rem;
+          text-align: center;
+          font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <button onclick="switchLang('pt')">PT</button>
+        <button onclick="switchLang('en')">EN</button>
+    </div>
+    <nav>
+        <a href="#" data-i18n="tools">Outras ferramentas</a>
+    </nav>
+    <h1 data-i18n="cpf">Gerador de CPF</h1>
+    <div class="gerar-cpf" style="text-align:center">
+        <button onclick="gerarCPF()" data-i18n="generateCPF">Gerar CPF</button>
+        <div id="cpf"></div>
+    </div>
+</div>
+<script src="js/general.js"></script>
+<script>
+    const i18n = {
+      pt: {
+        title: "Ferramentas para Devs",
+        cpf: "Gerador de CPF",
+        tools: "Outras ferramentas",
+        generateCPF: "Gerar CPF",
+      },
+      en: {
+        title: "Dev Tools",
+        cpf: "CPF Generator",
+        tools: "Other tools",
+        generateCPF: "Generate CPF",
+      }
+    };
+
+    window.onload = () => switchLang('pt');
+
+    function gerarCPF() {
+      const n = () => Math.floor(Math.random() * 9);
+      let n1 = n(), n2 = n(), n3 = n(), n4 = n(), n5 = n(), n6 = n(), n7 = n(), n8 = n(), n9 = n();
+      let d1 = n1 * 10 + n2 * 9 + n3 * 8 + n4 * 7 + n5 * 6 + n6 * 5 + n7 * 4 + n8 * 3 + n9 * 2;
+      d1 = 11 - (d1 % 11);
+      if (d1 >= 10) d1 = 0;
+      let d2 = n1 * 11 + n2 * 10 + n3 * 9 + n4 * 8 + n5 * 7 + n6 * 6 + n7 * 5 + n8 * 4 + n9 * 3 + d1 * 2;
+      d2 = 11 - (d2 % 11);
+      if (d2 >= 10) d2 = 0;
+      const cpf = `${n1}${n2}${n3}.${n4}${n5}${n6}.${n7}${n8}${n9}-${d1}${d2}`;
+      document.getElementById('cpf').innerText = cpf;
+    }
+</script>
+</body>
+</html>

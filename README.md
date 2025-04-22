@@ -1,2 +1,2 @@
 # devtools
-Repositório com 
+Repositório com ferramentas de desenvolvimento.
