@@ -228,6 +228,9 @@
         button:hover {
             background-color: #0056b3;
         }
+        .generate-button {
+            margin-bottom: 1rem;
+        }
         #cpf {
             margin-top: 1rem;
             margin-right: 2rem;
@@ -235,6 +238,10 @@
             font-size: 1.5rem;
             text-align: center;
             font-weight: bold;
+        }
+        p.format-option {
+            margin-top: 1rem;
+            text-align: center;
         }
         .ads {
             margin-top: 2rem;
@@ -332,18 +339,13 @@
             </ul>
             <p data-i18n="disclaimer"><strong>Atenção:</strong> Os CPFs gerados são fictícios e não devem ser usados para fins ilegais.</p>
         </div>
-
-        <br>
-
+        <p class="format-option">
+            <input type="checkbox" id="formatCPF" onclick="isCPFEmpty() ? null : generateCPF()" checked />
+            <span data-i18n="formatOption">Adicionar ponto e traço</span>
+        </p>
         <button class="generate-button" onclick="generateCPF()">
             <span class="icon">🔄</span> <span data-i18n="generateCPF">Gerar CPF Agora</span>
         </button>
-        <br>
-        <label>
-            <input type="checkbox" id="formatCPF" onclick="isCPFEmpty() ? null : generateCPF()" checked />
-            <span data-i18n="formatOption">Adicionar ponto e traço</span>
-        </label>
-
         <div id="result" style="margin-top: 1rem; font-size: 1.5rem; text-align: center; font-weight: bold;">
             <div id="cpf"
                  style="position: relative; padding: 1rem; border: 1px solid #ccc; border-radius: 5px; text-align: center;"></div>

@@ -213,6 +213,9 @@
             background-color: #218838;
             transform: scale(1.05);
         }
+        .generate-button {
+            margin-bottom: 1rem;
+        }
         button.action {
             margin-top: 2rem;
         }
@@ -223,6 +226,10 @@
             font-size: 1.5rem;
             text-align: center;
             font-weight: bold;
+        }
+        p.format-option {
+            margin-top: 1rem;
+            text-align: center;
         }
         .ads {
             margin-top: 2rem;
@@ -310,18 +317,13 @@
             </ul>
             <p data-i18n="disclaimer"><strong>Atenção:</strong> Os CNPJs gerados são fictícios e não devem ser usados para fins ilegais.</p>
         </div>
-
-        <br>
-
+        <p class="format-option">
+            <input type="checkbox" id="formatCNPJ" onclick="isCNPJEmpty() ? null : generateCNPJ()" checked />
+            <span data-i18n="formatOption">Adicionar formatação (pontos, barra e traço)</span>
+        </p>
         <button class="generate-button" onclick="generateCNPJ()">
             <span class="icon">🔄</span> <span data-i18n="generateCNPJ">Gerar CNPJ Agora</span>
         </button>
-        <br>
-        <label>
-            <input type="checkbox" id="formatCNPJ" onclick="isCNPJEmpty() ? null : generateCNPJ()" checked />
-            <span data-i18n="formatOption">Adicionar formatação (pontos, barra e traço)</span>
-        </label>
-
         <div id="result" style="margin-top: 1rem; font-size: 1.5rem; text-align: center; font-weight: bold;">
             <div id="cnpj"
                  style="position: relative; padding: 1rem; border: 1px solid #ccc; border-radius: 5px; text-align: center;"></div>
