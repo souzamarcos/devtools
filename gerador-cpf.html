@@ -1,9 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Gerador de CPF</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de CPF Válido Online e Grátis | Ferramentas para Desenvolvedores</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Gere números de CPF válidos online e gratuitamente. Ferramenta útil para desenvolvedores que precisam de dados simulados para testes e formulários.">
+    <link rel="canonical" href="https://allhelp.online/gerador-cpf.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Gerador de CPF Válido Online e Grátis" />
+    <meta property="og:description" content="Gere CPFs válidos e formatados com nossa ferramenta gratuita para devs e testers." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://allhelp.online/gerador-cpf.html" />
+    <meta property="og:image" content="https://allhelp.online/img/allhelp.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gerador de CPF Válido Online e Grátis" />
+    <meta name="twitter:description" content="Ferramenta de geração de CPFs válidos para desenvolvedores." />
+    <meta name="twitter:image" content="https://allhelp.online/img/allhelp.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16"  href="/img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Gerador de CPF",
+            "description": "Ferramenta gratuita para gerar CPFs válidos online com ou sem formatação.",
+            "url": "https://allhelp.online/gerador-cpf.html",
+            "inLanguage": "pt-BR"
+        }
+    </script>
+
     <link rel="stylesheet" href="css/style.css">
     <style>
         h1 {
@@ -19,6 +56,9 @@
             font-size: 1rem;
             border-radius: 5px;
             cursor: pointer;
+        }
+        button {
+            margin-top: 2rem;
         }
         button:hover {
             background-color: #0056b3;
@@ -48,13 +88,17 @@
     </nav>
     <h1 data-i18n="cpf">Gerador de CPF</h1>
     <div class="gerar-cpf" style="text-align:center">
-        <label>
-            <input type="checkbox" id="formatCPF" onclick="isCPFEmpty() ? null : generateCPF()" checked/>
-            <span data-i18n="formatCPF">Gerar com ponto e traço</span>
-        </label>
+        <h2 data-i18n="subtitle">Gerar CPF com ou sem formatação</h2>
+        <p data-i18n="description">Ferramenta pra geração rápida de CPF para testes locais de desenvolvedores em suas aplicações.</p> <a data-i18n="checkOtherTool" href="./validador-cpf.html">Veja nossa ferramenta para validar CPF.</a>
+
         <br>
-        <br>
+
         <button onclick="generateCPF()" data-i18n="generateCPF">Gerar CPF</button>
+        <br>
+        <label>
+            <input type="checkbox" id="formatCPF" onclick="isCPFEmpty() ? null : generateCPF()" checked />
+            Gerar com ponto e traço
+        </label>
 
         <div id="result" style="margin-top: 1rem; font-size: 1.5rem; text-align: center; font-weight: bold;">
             <div id="cpf"
@@ -78,7 +122,12 @@
              data-full-width-responsive="true"></ins>
 
     </div>
+    <footer>
+        <p style="text-align:center; font-size: 0.9rem;">© 2025 Ferramentas para Desenvolvedores | Uso exclusivo para fins de teste.</p>
+    </footer>
 </div>
+
+<!-- Scripts -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8817189280217840"
         crossorigin="anonymous"></script>
 <script src="js/general.js"></script>
@@ -86,6 +135,9 @@
     const i18n = {
         pt: {
             title: "Ferramentas para Devs",
+            subtitle: "Gerar CPF com ou sem formatação",
+            description: "Ferramenta pra geração rápida de CPF para testes locais de desenvolvedores em suas aplicações.",
+            checkOtherTool: "Veja nossa ferramenta para validar CPF",
             cpf: "Gerador de CPF",
             tools: "Outras ferramentas",
             generateCPF: "Gerar CPF",
@@ -97,6 +149,9 @@
         },
         en: {
             title: "Dev Tools",
+            subtitle: "Generate CPF with or without formatting",
+            description: "Quick CPF generation tool for local developer testing. Need to validate a CPF?",
+            checkOtherTool: "Check our tool to validate CPF",
             cpf: "CPF Generator",
             tools: "Other tools",
             generateCPF: "Generate CPF",
