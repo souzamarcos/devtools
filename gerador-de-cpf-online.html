@@ -340,7 +340,7 @@
             <p data-i18n="disclaimer"><strong>Atenção:</strong> Os CPFs gerados são fictícios e não devem ser usados para fins ilegais.</p>
         </div>
         <p class="format-option">
-            <input type="checkbox" id="formatCPF" onclick="isCPFEmpty() ? null : generateCPF()" checked />
+            <input type="checkbox" id="formatCPF" aria-label="Formatar" onclick="isCPFEmpty() ? null : generateCPF()" checked />
             <span data-i18n="formatOption">Adicionar ponto e traço</span>
         </p>
         <button class="generate-button" onclick="generateCPF()">

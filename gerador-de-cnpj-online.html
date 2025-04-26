@@ -318,7 +318,7 @@
             <p data-i18n="disclaimer"><strong>Atenção:</strong> Os CNPJs gerados são fictícios e não devem ser usados para fins ilegais.</p>
         </div>
         <p class="format-option">
-            <input type="checkbox" id="formatCNPJ" onclick="isCNPJEmpty() ? null : generateCNPJ()" checked />
+            <input type="checkbox" id="formatCNPJ" aria-label="Formatar" onclick="isCNPJEmpty() ? null : generateCNPJ()" checked />
             <span data-i18n="formatOption">Adicionar formatação (pontos, barra e traço)</span>
         </p>
         <button class="generate-button" onclick="generateCNPJ()">
