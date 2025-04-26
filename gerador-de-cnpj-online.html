@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de CNPJ Válido Online | Gratuito e Rápido | AllHelp</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Gere CNPJs válidos gratuitamente para testes e desenvolvimento. Nosso gerador é rápido, seguro e fácil de usar. Experimente agora!">
+    <link rel="canonical" href="https://allhelp.online/gerador-de-cnpj-online" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Gerador de CNPJ Válido Online e Grátis" />
+    <meta property="og:description" content="Gere CNPJs válidos e formatados com nossa ferramenta gratuita para devs e testers." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://allhelp.online/gerador-de-cnpj-online" />
+    <meta property="og:image" content="https://allhelp.online/img/allhelp.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gerador de CNPJ Válido Online e Grátis" />
+    <meta name="twitter:description" content="Ferramenta de geração de CNPJs válidos para desenvolvedores." />
+    <meta name="twitter:image" content="https://allhelp.online/img/allhelp.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16"  href="img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Gerador de CNPJ Válido",
+            "description": "Ferramenta online gratuita para gerar CNPJs válidos para testes de desenvolvimento",
+            "url": "https://allhelp.online/gerador-de-cnpj-online",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "BRL"
+            },
+            "creator": {
+                "@type": "Organization",
+                "name": "AllHelp"
+            }
+        }
+    </script>
+
+    <style>
+        /* Geral */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fafafa;
+            color: #333;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            position: relative;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        ul {
+            margin-bottom: 1rem;
+        }
+        #ads-bottom {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        #ads-center {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        input {
+            position: relative;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        /* Menu */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        nav .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 6px;
+            padding: 0.5rem 0;
+        }
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        nav .dropdown-content a {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #333;
+        }
+        nav .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #e0e0e0;
+        }
+        /* Idiomas */
+        .lang-switcher {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        .lang-switcher button {
+            margin-left: 0.5rem;
+            padding: 0.3rem 0.6rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            background-color: #e0e0e0;
+        }
+        .lang-switcher button:hover {
+            background-color: #ccc;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        /* Conteúdo */
+        .content-section {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .faq-section {
+            margin-top: 3rem;
+            padding: 1rem;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        /* Botões e resultados */
+        .gerar-cnpj button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .gerar-cnpj button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        button.action {
+            margin-top: 2rem;
+        }
+        #cnpj {
+            margin-top: 1rem;
+            margin-right: 2rem;
+            margin-left: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        .ads {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        /* Ferramentas relacionadas */
+        .related-tools {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            padding: 1rem;
+        }
+        .related-tools h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            color: #333;
+        }
+        .tool-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .tool-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #007bff;
+        }
+        .tool-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+            text-align: center;
+        }
+        .tool-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #007bff;
+            text-align: center;
+        }
+        .tool-content p {
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        @media (max-width: 600px) {
+            .tool-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <button onclick="switchLang('pt')">PT</button>
+        <button onclick="switchLang('en')">EN</button>
+    </div>
+    <nav>
+        <a href="index" data-i18n="tools">Outras ferramentas</a>
+    </nav>
+    <h1 data-i18n="cnpj">Gerador de CNPJ</h1>
+    <div class="gerar-cnpj" style="text-align:center">
+        <div class="content-section">
+            <h2 data-i18n="about">O que é um CNPJ?</h2>
+            <p data-i18n="aboutText">O CNPJ (Cadastro Nacional da Pessoa Jurídica) é um número único que identifica uma empresa perante a Receita Federal. Nosso gerador cria números válidos apenas para fins de teste e desenvolvimento.</p>
+
+            <h2 data-i18n="usage">Para que serve este gerador?</h2>
+            <ul>
+                <li data-i18n="usage1">Testes de sistemas empresariais</li>
+                <li data-i18n="usage2">Preenchimento de formulários de desenvolvimento</li>
+                <li data-i18n="usage3">Estudos de validação de dados</li>
+            </ul>
+            <p data-i18n="disclaimer"><strong>Atenção:</strong> Os CNPJs gerados são fictícios e não devem ser usados para fins ilegais.</p>
+        </div>
+
+        <br>
+
+        <button class="generate-button" onclick="generateCNPJ()">
+            <span class="icon">🔄</span> <span data-i18n="generateCNPJ">Gerar CNPJ Agora</span>
+        </button>
+        <br>
+        <label>
+            <input type="checkbox" id="formatCNPJ" onclick="isCNPJEmpty() ? null : generateCNPJ()" checked />
+            <span data-i18n="formatOption">Adicionar formatação (pontos, barra e traço)</span>
+        </label>
+
+        <div id="result" style="margin-top: 1rem; font-size: 1.5rem; text-align: center; font-weight: bold;">
+            <div id="cnpj"
+                 style="position: relative; padding: 1rem; border: 1px solid #ccc; border-radius: 5px; text-align: center;"></div>
+            <div style="top: 5px; right: 5px;; gap: 5px;">
+                <button onclick="copyCNPJ()" data-i18n="copy" style="font-size: 0.8rem; padding: 0.2rem 0.4rem;">Copiar</button>
+                <button onclick="clearCNPJ()" data-i18n="clear" style="font-size: 0.8rem; padding: 0.2rem 0.4rem;">Limpar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ads-bottom">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8817189280217840"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+
+    <div class="faq-section">
+        <h2 data-i18n="faqTitle">Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3 data-i18n="faq1">Os CNPJs gerados são válidos na Receita Federal?</h3>
+            <p data-i18n="faq1Text">Não, os CNPJs são gerados aleatoriamente seguindo o algoritmo oficial, mas não estão registrados na Receita Federal.</p>
+        </div>
+        <div class="faq-item">
+            <h3 data-i18n="faq2">Posso usar esses CNPJs para cadastros reais?</h3>
+            <p data-i18n="faq2Text">Não recomendamos. Esta ferramenta é apenas para fins de teste e desenvolvimento.</p>
+        </div>
+        <div class="faq-item">
+            <h3 data-i18n="faq3">Como validar um CNPJ gerado?</h3>
+            <p data-i18n="faq3Text">Use nossa <a href="./validador-cnpj">ferramenta de validação de CNPJ</a> para verificar.</p>
+        </div>
+    </div>
+
+    <div class="related-tools">
+        <h3 data-i18n="relatedTools">Ferramentas relacionadas</h3>
+        <div class="tool-cards">
+            <a href="./gerador-de-cpf-online" class="tool-card">
+                <div class="tool-icon">👤</div>
+                <div class="tool-content">
+                    <h4 data-i18n="generateCPF">Gerador de CPF</h4>
+                    <p data-i18n="generateCPFDescription">Gere CPFs válidos para testes</p>
+                </div>
+            </a>
+<!--            <a href="./validador-cnpj" class="tool-card">-->
+<!--                <div class="tool-icon">🔍</div>-->
+<!--                <div class="tool-content">-->
+<!--                    <h4 data-i18n="validatorCNPJ">Validador de CNPJ</h4>-->
+<!--                    <p data-i18n="validatorCNPJDescription">Verifique se um CNPJ é válido</p>-->
+<!--                </div>-->
+<!--            </a>-->
+        </div>
+    </div>
+
+    <footer>
+        <p data-i18n="footer" style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
+            © 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.
+        </p>
+    </footer>
+</div>
+
+<!-- Scripts -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8817189280217840"
+        crossorigin="anonymous"></script>
+<script src="js/general.js"></script>
+<script>
+    const i18n = {
+        pt: {
+            title: "Ferramentas para Devs",
+            cnpj: "Gerador de CNPJ",
+            tools: "Outras ferramentas",
+            generateCNPJ: "Gerar CNPJ Agora",
+            formatCNPJ: "Adicionar formatação (pontos, barra e traço)",
+            copy: "Copiar",
+            clear: "Limpar",
+            copySuccess: "CNPJ copiado!",
+            copyError: "Erro ao copiar CNPJ!",
+            about: "O que é um CNPJ?",
+            aboutText: "O CNPJ (Cadastro Nacional da Pessoa Jurídica) é um número único que identifica uma empresa perante a Receita Federal. Nosso gerador cria números válidos apenas para fins de teste e desenvolvimento.",
+            usage: "Para que serve este gerador?",
+            usage1: "Testes de sistemas empresariais",
+            usage2: "Preenchimento de formulários de desenvolvimento",
+            usage3: "Estudos de validação de dados",
+            disclaimer: "Atenção: Os CNPJs gerados são fictícios e não devem ser usados para fins ilegais.",
+            faqTitle: "Perguntas Frequentes",
+            faq1: "Os CNPJs gerados são válidos na Receita Federal?",
+            faq1Text: "Não, os CNPJs são gerados aleatoriamente seguindo o algoritmo oficial, mas não estão registrados na Receita Federal.",
+            faq2: "Posso usar esses CNPJs para cadastros reais?",
+            faq2Text: "Não recomendamos. Esta ferramenta é apenas para fins de teste e desenvolvimento.",
+            faq3: "Como validar um CNPJ gerado?",
+            faq3Text: "Use nossa ferramenta de validação de CNPJ para verificar.",
+            generateCPF: "Gerador de CPF",
+            generateCPFDescription: "Gere CPFs válidos para testes",
+            validatorCNPJ: "Validador de CNPJ",
+            validatorCNPJDescription: "Verifique se um CNPJ é válido",
+            footer: "© 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.",
+            formatOption: "Adicionar formatação (pontos, barra e traço)",
+        },
+        en: {
+            title: "Dev Tools",
+            cnpj: "CNPJ Generator",
+            tools: "Other tools",
+            generateCNPJ: "Generate CNPJ Now",
+            formatCNPJ: "Add formatting (dots, slash and dash)",
+            copy: "Copy",
+            clear: "Clear",
+            copySuccess: "CNPJ copied!",
+            copyError: "Error copying CNPJ!",
+            about: "What is a CNPJ?",
+            aboutText: "The CNPJ (National Registry of Legal Entities) is a unique number that identifies a company with the Federal Revenue Service. Our generator creates valid numbers only for testing and development purposes.",
+            usage: "What is this generator for?",
+            usage1: "Business systems testing",
+            usage2: "Filling out development forms",
+            usage3: "Data validation studies",
+            disclaimer: "Attention: The generated CNPJs are fictitious and should not be used for illegal purposes.",
+            faqTitle: "Frequently Asked Questions",
+            faq1: "Are the generated CNPJs valid with the Federal Revenue?",
+            faq1Text: "No, CNPJs are randomly generated following the official algorithm, but they are not registered with the Federal Revenue.",
+            faq2: "Can I use these CNPJs for real registrations?",
+            faq2Text: "We do not recommend it. This tool is only for testing and development purposes.",
+            faq3: "How to validate a generated CNPJ?",
+            faq3Text: "Use our CNPJ validation tool to check.",
+            generateCPF: "CPF Generator",
+            generateCPFDescription: "Generate valid CPFs for testing",
+            validatorCNPJ: "CNPJ Validator",
+            validatorCNPJDescription: "Check if a CNPJ is valid",
+            footer: "© 2025 AllHelp.online | Developer Tools. Exclusive use for testing purposes.",
+            formatOption: "Add formatting (dots, slash and dash)",
+        }
+    };
+
+    window.onload = () => switchLang('pt');
+
+    function copyCNPJ() {
+        const cnpjText = document.getElementById('cnpj').innerText;
+        navigator.clipboard.writeText(cnpjText)
+            .then(() => alert(i18n[document.documentElement.lang].copySuccess))
+            .catch(() => alert(i18n[document.documentElement.lang].copyError));
+    }
+
+    function clearCNPJ() {
+        document.getElementById('cnpj').innerText = '';
+    }
+
+    function isCNPJEmpty() {
+        const cnpj = document.getElementById('cnpj').innerText;
+        return cnpj === '' || cnpj === 'undefined' || cnpj === 'null';
+    }
+
+    function generateCNPJ() {
+        // Gera os 12 primeiros dígitos aleatoriamente
+        const n = () => Math.floor(Math.random() * 9);
+        let n1 = n(), n2 = n(), n3 = n(), n4 = n(),
+            n5 = n(), n6 = n(), n7 = n(), n8 = n(),
+            n9 = 0, n10 = 0, n11 = 0, n12 = 1; // Começa com 0001 para parecer mais real
+
+        // Cálculo do primeiro dígito verificador
+        let d1 = n1*5 + n2*4 + n3*3 + n4*2 + n5*9 + n6*8 + n7*7 + n8*6 + n9*5 + n10*4 + n11*3 + n12*2;
+        d1 = 11 - (d1 % 11);
+        if (d1 >= 10) d1 = 0;
+
+        // Cálculo do segundo dígito verificador
+        let d2 = n1*6 + n2*5 + n3*4 + n4*3 + n5*2 + n6*9 + n7*8 + n8*7 + n9*6 + n10*5 + n11*4 + n12*3 + d1*2;
+        d2 = 11 - (d2 % 11);
+        if (d2 >= 10) d2 = 0;
+
+        const formatCNPJ = document.getElementById('formatCNPJ').checked;
+        const cnpj = formatCNPJ
+            ? `${n1}${n2}.${n3}${n4}${n5}.${n6}${n7}${n8}/${n9}${n10}${n11}${n12}-${d1}${d2}`
+            : `${n1}${n2}${n3}${n4}${n5}${n6}${n7}${n8}${n9}${n10}${n11}${n12}${d1}${d2}`;
+
+        document.getElementById('cnpj').innerText = cnpj;
+    }
+
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
+</html>
