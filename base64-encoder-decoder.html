@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Validador de CPF Online e Grátis | Ferramentas para Desenvolvedores</title>
+    <title>Codificador Base64 Online e Grátis | Ferramentas para Desenvolvedores</title>
 
     <!-- SEO -->
-    <meta name="description" content="Valide CPF online e gratuitamente. Ferramenta útil para desenvolvedores que precisam de dados simulados para testes e formulários.">
-    <link rel="canonical" href="https://allhelp.online/validador-cpf.html" />
+    <meta name="description" content="Codifique e decodifique texto em Base64 online e gratuitamente. Ferramenta útil para desenvolvedores que precisam trabalhar com codificação de dados.">
+    <link rel="canonical" href="https://allhelp.online/base64-encoder.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="Validador de CPF Online e Grátis" />
-    <meta property="og:description" content="Valide CPFs com nossa ferramenta gratuita para devs e testers." />
+    <meta property="og:title" content="Codificador Base64 Online e Grátis" />
+    <meta property="og:description" content="Codifique e decodifique texto em Base64 com nossa ferramenta gratuita para devs." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://allhelp.online/validador-cpf.html" />
+    <meta property="og:url" content="https://allhelp.online/base64-encoder.html" />
     <meta property="og:image" content="https://allhelp.online/img/allhelp.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Validador de CPF Online e Grátis" />
-    <meta name="twitter:description" content="Ferramenta de validação de CPFs para desenvolvedores." />
+    <meta name="twitter:title" content="Codificador Base64 Online e Grátis" />
+    <meta name="twitter:description" content="Ferramenta de codificação Base64 para desenvolvedores." />
     <meta name="twitter:image" content="https://allhelp.online/img/allhelp.png" />
 
     <!-- Favicon -->
@@ -28,15 +28,14 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-
     <!-- Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Validador de CPF",
-            "description": "Ferramenta gratuita para validar CPFs com ou sem formatação.",
-            "url": "https://allhelp.online/validador-cpf.html",
+            "name": "Codificador Base64",
+            "description": "Ferramenta gratuita para codificar e decodificar texto em Base64 online.",
+            "url": "https://allhelp.online/base64-encoder.html",
             "inLanguage": "pt-BR"
         }
     </script>
@@ -83,14 +82,13 @@
             margin-bottom: 2rem;
             text-align: center;
         }
-        input {
+        input, textarea {
             position: relative;
             padding: 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
-            text-align: center;
-            font-weight: bold;
+            width: 100%;
         }
         /* */
         /* Menu */
@@ -172,7 +170,7 @@
             font-size: 1.8rem;
             margin-bottom: 1rem;
         }
-        .validar-cpf button {
+        button.blue {
             background-color: #007bff;
             color: white;
             border: none;
@@ -180,44 +178,82 @@
             font-size: 1rem;
             border-radius: 5px;
             cursor: pointer;
+            margin: 0.5rem 0;
         }
         button:hover {
             background-color: #0056b3;
         }
-        #result {
+        .button-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .button-group button {
+            flex: 1;
+        }
+        .result-container {
             margin-top: 1rem;
-            font-size: 1.5rem;
             text-align: center;
+        }
+        .result-label {
             font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .result-box {
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            min-height: 100px;
+            word-wrap: break-word;
+        }
+        .action-buttons {
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            justify-content: flex-end;
+        }
+        .action-buttons button {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.6rem;
         }
         .ads {
             margin-top: 2rem;
             text-align: center;
-        }
-        #cpfInput {
-            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="lang-switcher">
-        <button onclick="switchLang('pt');clearResult();">PT</button>
-        <button onclick="switchLang('en');clearResult();">EN</button>
+        <button onclick="switchLang('pt')">PT</button>
+        <button onclick="switchLang('en')">EN</button>
     </div>
     <nav>
         <a href="index.html" data-i18n="tools">Outras ferramentas</a>
     </nav>
-    <h1 data-i18n="validateCPF">Validador de CPF</h1>
-    <div class="validar-cpf" style="text-align:center">
-        <h2 data-i18n="subtitle">Valide CPF com ou sem formatação</h2>
-        <p data-i18n="description">Ferramenta pra validação rápida de CPF para testes locais de desenvolvedores em suas aplicações.</p> <a data-i18n="checkOtherTool" href="./gerador-cpf.html">Veja nossa ferramenta para gerar CPF.</a>
+    <h1 data-i18n="title">Codificador Base64</h1>
+    <div style="text-align:center">
+        <h2 data-i18n="subtitle">Codificar e decodificar texto em Base64</h2>
+        <p data-i18n="description">Ferramenta para conversão rápida de texto para Base64 e vice-versa.</p>
 
-        <br>
-        <input type="text" id="cpfInput" placeholder="Digite o CPF" data-placeholder-i18n="enterCPF" />
-        <br><br>
-        <button onclick="validateCPF()" data-i18n="validate">Validar CPF</button>
-        <div id="result"></div>
+        <div style="margin-top: 1.5rem;">
+            <label for="inputText" data-i18n="inputLabel">Texto para codificar/decodificar:</label>
+            <textarea id="inputText" rows="4" placeholder="Digite o texto aqui..."></textarea>
+
+            <div class="button-group">
+                <button class="blue" onclick="encodeBase64()" data-i18n="encodeButton">Codificar para Base64</button>
+                <button class="blue" onclick="decodeBase64()" data-i18n="decodeButton">Decodificar de Base64</button>
+            </div>
+
+            <div class="result-container">
+                <div class="result-label" data-i18n="resultLabel">Resultado:</div>
+                <div id="result" class="result-box"></div>
+                <div class="action-buttons">
+                    <button class="blue" onclick="copyResult()" data-i18n="copy">Copiar</button>
+                    <button class="blue" onclick="clearAll()" data-i18n="clear">Limpar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="ads-bottom">
@@ -236,60 +272,70 @@
 </div>
 
 <!-- Scripts -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8817189280217840" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8817189280217840"
+        crossorigin="anonymous"></script>
 <script src="js/general.js"></script>
 <script>
     const i18n = {
         pt: {
-            validateCPF: "Validador de CPF",
-            subtitle: "Valide CPF com ou sem formatação",
-            description: "Ferramenta pra validação rápida de CPF para testes locais de desenvolvedores em suas aplicações.",
-            checkOtherTool: "Veja nossa ferramenta para gerar CPF.",
+            title: "Codificador Base64",
+            subtitle: "Codificar e decodificar texto em Base64",
+            description: "Ferramenta para conversão rápida de texto para Base64 e vice-versa.",
+            inputLabel: "Texto para codificar/decodificar:",
+            resultLabel: "Resultado:",
+            encodeButton: "Codificar para Base64",
+            decodeButton: "Decodificar de Base64",
             tools: "Outras ferramentas",
-            validate: "Validar CPF",
-            enterCPF: "Digite o CPF",
-            validCPF: "CPF válido!",
-            invalidCPF: "CPF inválido!"
+            copy: "Copiar",
+            clear: "Limpar",
+            copySuccess: "Texto copiado!",
+            copyError: "Erro ao copiar texto!",
+            invalidBase64: "Texto inválido para decodificação Base64"
         },
         en: {
-            validateCPF: "CPF Validator",
-            subtitle: "Validate CPF with or without formatting",
-            description: "Quick CPF validation tool for local developer testing in their applications.",
-            checkOtherTool: "Check out our tool to generate CPF.",
+            title: "Base64 Encoder",
+            subtitle: "Encode and decode text in Base64",
+            description: "Quick tool to convert text to Base64 and vice versa.",
+            inputLabel: "Text to encode/decode:",
+            resultLabel: "Result:",
+            encodeButton: "Encode to Base64",
+            decodeButton: "Decode from Base64",
             tools: "Other tools",
-            validate: "Validate CPF",
-            enterCPF: "Enter CPF",
-            validCPF: "Valid CPF!",
-            invalidCPF: "Invalid CPF!"
+            copy: "Copy",
+            clear: "Clear",
+            copySuccess: "Text copied!",
+            copyError: "Error copying text!",
+            invalidBase64: "Invalid text for Base64 decoding"
         }
     };
 
     window.onload = () => switchLang('pt');
 
-    function validateCPF() {
-        const cpf = document.getElementById('cpfInput').value.replace(/\D/g, '');
-        if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
-            document.getElementById('result').innerText = i18n[document.documentElement.lang].invalidCPF;
-            return;
-        }
-        let sum = 0, remainder;
-        for (let i = 1; i <= 9; i++) sum += parseInt(cpf[i - 1]) * (11 - i);
-        remainder = (sum * 10) % 11;
-        if (remainder === 10 || remainder === 11) remainder = 0;
-        if (remainder !== parseInt(cpf[9])) {
-            document.getElementById('result').innerText = i18n[document.documentElement.lang].invalidCPF;
-            return;
-        }
-        sum = 0;
-        for (let i = 1; i <= 10; i++) sum += parseInt(cpf[i - 1]) * (12 - i);
-        remainder = (sum * 10) % 11;
-        if (remainder === 10 || remainder === 11) remainder = 0;
-        document.getElementById('result').innerText = remainder === parseInt(cpf[10])
-            ? i18n[document.documentElement.lang].validCPF
-            : i18n[document.documentElement.lang].invalidCPF;
+    function encodeBase64() {
+        const input = document.getElementById('inputText').value;
+        const encoded = btoa(unescape(encodeURIComponent(input)));
+        document.getElementById('result').innerText = encoded;
     }
 
-    function clearResult() {
+    function decodeBase64() {
+        try {
+            const input = document.getElementById('inputText').value;
+            const decoded = decodeURIComponent(escape(atob(input)));
+            document.getElementById('result').innerText = decoded;
+        } catch (e) {
+            document.getElementById('result').innerText = i18n[currentLang].invalidBase64;
+        }
+    }
+
+    function copyResult() {
+        const resultText = document.getElementById('result').innerText;
+        navigator.clipboard.writeText(resultText)
+            .then(() => alert(i18n[currentLang].copySuccess))
+            .catch(() => alert(i18n[currentLang].copyError));
+    }
+
+    function clearAll() {
+        document.getElementById('inputText').value = '';
         document.getElementById('result').innerText = '';
     }
 
