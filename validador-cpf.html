@@ -75,6 +75,9 @@
             margin-top: 2rem;
             text-align: center;
         }
+        #cpfInput {
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -88,6 +91,10 @@
     </nav>
     <h1 data-i18n="validateCPF">Validador de CPF</h1>
     <div class="validar-cpf" style="text-align:center">
+        <h2 data-i18n="subtitle">Valide CPF com ou sem formatação</h2>
+        <p data-i18n="description">Ferramenta pra validação rápida de CPF para testes locais de desenvolvedores em suas aplicações.</p> <a data-i18n="checkOtherTool" href="./gerador-cpf.html">Veja nossa ferramenta para gerar CPF.</a>
+
+        <br>
         <input type="text" id="cpfInput" placeholder="Digite o CPF" data-placeholder-i18n="enterCPF" />
         <br><br>
         <button onclick="validateCPF()" data-i18n="validate">Validar CPF</button>
@@ -116,6 +123,9 @@
     const i18n = {
         pt: {
             validateCPF: "Validador de CPF",
+            subtitle: "Valide CPF com ou sem formatação",
+            description: "Ferramenta pra validação rápida de CPF para testes locais de desenvolvedores em suas aplicações.",
+            checkOtherTool: "Veja nossa ferramenta para gerar CPF.",
             tools: "Outras ferramentas",
             validate: "Validar CPF",
             enterCPF: "Digite o CPF",
@@ -124,6 +134,9 @@
         },
         en: {
             validateCPF: "CPF Validator",
+            subtitle: "Validate CPF with or without formatting",
+            description: "Quick CPF validation tool for local developer testing in their applications.",
+            checkOtherTool: "Check out our tool to generate CPF.",
             tools: "Other tools",
             validate: "Validate CPF",
             enterCPF: "Enter CPF",
