@@ -1,9 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de Itens</title>
+    <title>AllHelp.online | Ferramentas para Desenvolvedores</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Acesse ferramentas gratuitas para desenvolvedores como Gerador de CPF, Validador de CPF e muito mais. Simples, online e útil para testes.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://allhelp.online/index.html" />
+
+    <!-- hreflang para multilíngue -->
+    <link rel="alternate" hreflang="pt-BR" href="https://allhelp.online/index.html" />
+    <link rel="alternate" hreflang="en" href="https://allhelp.online/en/index.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="AllHelp - Ferramentas gratuitas para desenvolvedores" />
+    <meta property="og:description" content="Gerador de CPF, Validador de CPF e outras ferramentas úteis online e gratuitas para devs." />
+    <meta property="og:url" content="https://allhelp.online/index.html" />
+    <meta property="og:image" content="https://allhelp.online/img/allhelp.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AllHelp - Ferramentas gratuitas para desenvolvedores" />
+    <meta name="twitter:description" content="Explore o Gerador de CPF e outras ferramentas essenciais para desenvolvedores." />
+    <meta name="twitter:image" content="https://allhelp.online/assets/img/allhelp.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "AllHelp.online",
+            "url": "https://allhelp.online",
+            "description": "Ferramentas úteis para desenvolvedores como Gerador de CPF e Validador de CPF.",
+            "inLanguage": "pt-BR"
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16"  href="/img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/style.css">
     <style>
         table {
@@ -22,6 +64,7 @@
             background-color: #f4f4f4;
         }
         #filter {
+            margin-top: 1.5rem;
             margin-bottom: 1rem;
             padding: 0.5rem;
             width: 100%;
@@ -40,7 +83,29 @@
             <a href="index.html" data-i18n="tools">Outras ferramentas</a>
         </nav>
 
-        <h1 data-i18n="toolsTitle">Lista de Itens</h1>
+        <header>
+            <h1 data-i18n="toolsTitle">Lista de Ferramentas Gratuitas</h1>
+            <p data-i18n="description">Descubra utilitários online para desenvolvedores, testers e profissionais de tecnologia.</p>
+        </header>
+        <input type="text" id="filter" placeholder="Filtrar itens..." data-placeholder-i18n="filterPlaceholder" />
+        <table>
+            <thead>
+                <tr>
+                    <th data-i18n="tableColumnItem">Item</th>
+                    <th data-i18n="tableColumnDescription">Descrição</th>
+                </tr>
+            </thead>
+            <tbody id="itemTable">
+                <tr>
+                    <td><a href="gerador-cpf.html" data-i18n="items[0].name">Gerador de CPF</a></td>
+                    <td><a href="gerador-cpf.html" data-i18n="items[0].description">Ferramenta para gerar CPF válido.</a></td>
+                </tr>
+                <tr>
+                    <td><a href="validador-cpf.html" data-i18n="items[1].name">Validador de CPF</a></td>
+                    <td><a href="validador-cpf.html" data-i18n="items[1].description">Ferramenta para validar CPF</a></td>
+                </tr>
+            </tbody>
+        </table>
         <div id="ads-center">
             <ins class="adsbygoogle"
                  style="display:block"
@@ -49,27 +114,10 @@
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
         </div>
-        <input type="text" id="filter" placeholder="Filtrar itens..." data-placeholder-i18n="filterPlaceholder" />
-        <table>
-            <thead>
-                <tr>
-                    <th data-i18n="item">Item</th>
-                    <th data-i18n="description">Descrição</th>
-                </tr>
-            </thead>
-            <tbody id="itemTable">
-                <tr>
-                    <td><a href="gerador-cpf.html" data-i18n="items[0].name">Gerador CPF</a></td>
-                    <td><a href="gerador-cpf.html" data-i18n="items[0].description">Gerador de CPF</a></td>
-                </tr>
-                <tr>
-                    <td><a href="validador-cpf.html" data-i18n="items[1].name">Validador CPF</a></td>
-                    <td><a href="validador-cpf.html" data-i18n="items[1].description">Validador de CPF</a></td>
-                </tr>
-            </tbody>
-        </table>
         <footer>
-            <p style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">© 2025 Ferramentas para Desenvolvedores | Uso exclusivo para fins de teste.</p>
+            <p style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
+                © 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.
+            </p>
         </footer>
     </div>
 </body>
@@ -79,10 +127,11 @@
     const i18n = {
         pt: {
             tools: "Outras ferramentas",
-            toolsTitle: "Lista de Itens",
+            toolsTitle: "Lista de Ferramentas Gratuitas",
+            description: "Descubra utilitários online para desenvolvedores, testers e profissionais de tecnologia.",
             filterPlaceholder: "Filtrar itens...",
-            item: "Item",
-            description: "Descrição",
+            tableColumnItem: "Item",
+            tableColumnDescription: "Descrição",
             items: [
                 {
                     name: "Gerador de CPF",
@@ -96,10 +145,11 @@
         },
         en: {
             tools: "Other tools",
-            toolsTitle: "Item List",
+            toolsTitle: "List of Free Tools",
+            description: "Discover online utilities for developers, testers, and tech professionals.",
             filterPlaceholder: "Filter items...",
-            item: "Item",
-            description: "Description",
+            tableColumnItem: "Item",
+            tableColumnDescription: "Description",
             items: [
                 {
                     name: "CPF Generator",
