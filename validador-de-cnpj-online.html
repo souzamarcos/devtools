@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Validador de CPF Online | Gratuito e Rápido | AllHelp</title>
+    <title>Validador de CNPJ Online | Gratuito e Rápido | AllHelp</title>
 
     <!-- SEO -->
-    <meta name="description" content="Valide CPFs gratuitamente para testes e desenvolvimento. Nosso validador é rápido, seguro e fácil de usar. Experimente agora!">
-    <link rel="canonical" href="https://allhelp.online/validador-de-cpf-online" />
+    <meta name="description" content="Valide CNPJs gratuitamente para testes e desenvolvimento. Nosso validador é rápido, seguro e fácil de usar. Experimente agora!">
+    <link rel="canonical" href="https://allhelp.online/validador-de-cnpj-online" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="Validador de CPF Online e Grátis" />
-    <meta property="og:description" content="Valide CPFs com nossa ferramenta gratuita para devs e testers." />
+    <meta property="og:title" content="Validador de CNPJ Online e Grátis" />
+    <meta property="og:description" content="Valide CNPJs com nossa ferramenta gratuita para devs e testers." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://allhelp.online/validador-de-cpf-online" />
+    <meta property="og:url" content="https://allhelp.online/validador-de-cnpj-online" />
     <meta property="og:image" content="https://allhelp.online/img/allhelp.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Validador de CPF Online e Grátis" />
-    <meta name="twitter:description" content="Ferramenta de validação de CPFs para desenvolvedores." />
+    <meta name="twitter:title" content="Validador de CNPJ Online e Grátis" />
+    <meta name="twitter:description" content="Ferramenta de validação de CNPJs para desenvolvedores." />
     <meta name="twitter:image" content="https://allhelp.online/img/allhelp.png" />
 
     <!-- Favicon -->
@@ -33,9 +33,9 @@
         {
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Validador de CPF",
-            "description": "Ferramenta online gratuita para validar CPFs para testes de desenvolvimento",
-            "url": "https://allhelp.online/validador-de-cpf-online",
+            "name": "Validador de CNPJ",
+            "description": "Ferramenta online gratuita para validar CNPJs para testes de desenvolvimento",
+            "url": "https://allhelp.online/validador-de-cnpj-online",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Any",
             "offers": {
@@ -201,7 +201,7 @@
             margin-bottom: 1.5rem;
         }
         /* Botões e resultados */
-        #cpfInput {
+        #cnpjInput {
             margin-top: 1rem;
         }
         button.validate {
@@ -317,28 +317,31 @@
         <button onclick="switchLang('pt')">PT</button>
         <button onclick="switchLang('en')">EN</button>
     </div>
+
     <nav>
         <a href="./" data-i18n="tools">Outras ferramentas</a>
     </nav>
-    <h1 data-i18n="validateCPF">Validador de CPF</h1>
-    <div class="validar-cpf" style="text-align:center">
+
+    <h1 data-i18n="validateCNPJ">Validador de CNPJ</h1>
+
+    <div class="validar-cnpj" style="text-align:center">
         <div class="content-section">
-            <h2 data-i18n="about">O que é um CPF?</h2>
-            <p data-i18n="aboutText">O CPF (Cadastro de Pessoas Físicas) é um documento brasileiro utilizado para identificação fiscal. Nosso validador verifica se um CPF segue as regras oficiais.</p>
+            <h2 data-i18n="about">O que é um CNPJ?</h2>
+            <p data-i18n="aboutText">O CNPJ (Cadastro Nacional da Pessoa Jurídica) é um número único que identifica uma empresa perante a Receita Federal. Nosso validador verifica se um CNPJ segue as regras oficiais.</p>
 
             <h2 data-i18n="usage">Como usar este validador?</h2>
             <ul>
-                <li data-i18n="usage1">Cole o CPF gerado para verificar sua validade</li>
-                <li data-i18n="usage2">Teste sistemas que exigem validação de CPF</li>
-                <li data-i18n="usage3">Verifique CPFs em formulários de desenvolvimento</li>
+                <li data-i18n="usage1">Cole o CNPJ gerado para verificar sua validade</li>
+                <li data-i18n="usage2">Teste sistemas que exigem validação de CNPJ</li>
+                <li data-i18n="usage3">Verifique CNPJs em formulários de desenvolvimento</li>
             </ul>
-            <p data-i18n="disclaimer"><strong>Dica:</strong> Use nosso <a href="./gerador-de-cpf-online">gerador de CPF</a> para criar números válidos para teste.</p>
+            <p data-i18n="disclaimer"><strong>Dica:</strong> Use nosso <a href="./gerador-de-cnpj-online" data-i18n="generatorLink">gerador de CNPJ</a> para criar números válidos para teste.</p>
         </div>
 
-        <input type="text" id="cpfInput" placeholder="Digite o CPF" data-placeholder-i18n="enterCPF" />
+        <input type="text" id="cnpjInput" placeholder="Digite o CNPJ" data-placeholder-i18n="enterCNPJ" />
         <br>
-        <button class="validate" onclick="validateCPF()" style="margin-top: 1rem;">
-            <span class="icon">🔍</span> <span data-i18n="validate">Validar CPF</span>
+        <button class="validate" onclick="validateCNPJ()">
+            <span class="icon">🔍</span> <span data-i18n="validateButton">Validar CNPJ</span>
         </button>
 
         <div id="result" class="result-box" style="display: none;">
@@ -346,7 +349,7 @@
         </div>
     </div>
 
-    <div id="ads-bottom">
+    <div class="ads">
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-8817189280217840"
@@ -358,43 +361,41 @@
     <div class="faq-section">
         <h2 data-i18n="faqTitle">Perguntas Frequentes</h2>
         <div class="faq-item">
-            <h3 data-i18n="faq1">O validador verifica se o CPF existe?</h3>
+            <h3 data-i18n="faq1">O validador verifica se o CNPJ existe?</h3>
             <p data-i18n="faq1Text">Não, apenas verificamos se o número segue o algoritmo oficial. Não temos acesso aos registros da Receita Federal.</p>
         </div>
         <div class="faq-item">
-            <h3 data-i18n="faq2">Posso validar CPFs formatados?</h3>
-            <p data-i18n="faq2Text">Sim, nosso validador reconhece CPFs no formato 000.000.000-00 ou apenas os números.</p>
+            <h3 data-i18n="faq2">Posso validar CNPJs formatados?</h3>
+            <p data-i18n="faq2Text">Sim, nosso validador reconhece CNPJs no formato 00.000.000/0000-00 ou apenas os números.</p>
         </div>
         <div class="faq-item">
-            <h3 data-i18n="faq3">Como gerar CPFs válidos?</h3>
-            <p data-i18n="faq3Text">Use nosso <a href="./gerador-de-cpf-online">gerador de CPF</a> para criar números válidos para testes.</p>
+            <h3 data-i18n="faq3">Como gerar CNPJs válidos?</h3>
+            <p data-i18n="faq3Text">Use nosso <a href="./gerador-de-cnpj-online" data-i18n="generatorLink">gerador de CNPJ</a> para criar números válidos para testes.</p>
         </div>
     </div>
 
     <div class="related-tools">
         <h3 data-i18n="relatedTools">Ferramentas relacionadas</h3>
         <div class="tool-cards">
-            <a href="./gerador-de-cpf-online" class="tool-card">
-                <div class="tool-icon">🔄</div>
+            <a href="./validador-de-cpf-online" class="tool-card">
+                <div class="tool-icon">👤</div>
                 <div class="tool-content">
-                    <h4 data-i18n="generateCPF">Gerador de CPF</h4>
-                    <p data-i18n="generateCPFDescription">Gere CPFs válidos para testes</p>
+                    <h4 data-i18n="validatorCPF">Validador de CPF</h4>
+                    <p data-i18n="validatorCPFDescription">Verifique se um CPF é válido</p>
                 </div>
             </a>
-            <a href="./validador-de-cnpj-online" class="tool-card">
+            <a href="./gerador-de-cnpj-online" class="tool-card">
                 <div class="tool-icon">🏢</div>
                 <div class="tool-content">
-                    <h4 data-i18n="validatorCNPJ">Validador de CNPJ</h4>
-                    <p data-i18n="validatorCNPJDescription">Verifique se um CNPJ é válido</p>
+                    <h4 data-i18n="generateCNPJ">Gerador de CNPJ</h4>
+                    <p data-i18n="generateCNPJDescription">Gere CNPJs válidos para testes</p>
                 </div>
             </a>
         </div>
     </div>
 
     <footer>
-        <p data-i18n="footer" style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
-            © 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.
-        </p>
+        <p data-i18n="footer">© 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.</p>
     </footer>
 </div>
 
@@ -405,98 +406,124 @@
 <script>
     const i18n = {
         pt: {
-            validateCPF: "Validador de CPF",
-            about: "O que é um CPF?",
-            aboutText: "O CPF (Cadastro de Pessoas Físicas) é um documento brasileiro utilizado para identificação fiscal. Nosso validador verifica se um CPF segue as regras oficiais.",
+            validateCNPJ: "Validador de CNPJ",
+            about: "O que é um CNPJ?",
+            aboutText: "O CNPJ (Cadastro Nacional da Pessoa Jurídica) é um número único que identifica uma empresa perante a Receita Federal. Nosso validador verifica se um CNPJ segue as regras oficiais.",
             usage: "Como usar este validador?",
-            usage1: "Cole o CPF gerado para verificar sua validade",
-            usage2: "Teste sistemas que exigem validação de CPF",
-            usage3: "Verifique CPFs em formulários de desenvolvimento",
-            disclaimer: "Dica: Use nosso gerador de CPF para criar números válidos para teste.",
+            usage1: "Cole o CNPJ gerado para verificar sua validade",
+            usage2: "Teste sistemas que exigem validação de CNPJ",
+            usage3: "Verifique CNPJs em formulários de desenvolvimento",
+            disclaimer: "Dica: Use nosso gerador de CNPJ para criar números válidos para teste.",
             tools: "Outras ferramentas",
-            validate: "Validar CPF",
-            enterCPF: "Digite o CPF",
-            validCPF: "CPF válido!",
-            invalidCPF: "CPF inválido!",
+            validate: "Validar CNPJ",
+            validateButton: "Validar CNPJ",
+            enterCNPJ: "Digite o CNPJ",
+            validCNPJ: "CNPJ válido!",
+            invalidCNPJ: "CNPJ inválido!",
             faqTitle: "Perguntas Frequentes",
-            faq1: "O validador verifica se o CPF existe?",
+            faq1: "O validador verifica se o CNPJ existe?",
             faq1Text: "Não, apenas verificamos se o número segue o algoritmo oficial. Não temos acesso aos registros da Receita Federal.",
-            faq2: "Posso validar CPFs formatados?",
-            faq2Text: "Sim, nosso validador reconhece CPFs no formato 000.000.000-00 ou apenas os números.",
-            faq3: "Como gerar CPFs válidos?",
-            faq3Text: "Use nosso gerador de CPF para criar números válidos para testes.",
-            generateCPF: "Gerador de CPF",
-            generateCPFDescription: "Gere CPFs válidos para testes",
-            validatorCNPJ: "Validador de CNPJ",
-            validatorCNPJDescription: "Verifique se um CNPJ é válido",
+            faq2: "Posso validar CNPJs formatados?",
+            faq2Text: "Sim, nosso validador reconhece CNPJs no formato 00.000.000/0000-00 ou apenas os números.",
+            faq3: "Como gerar CNPJs válidos?",
+            faq3Text: "Use nosso gerador de CNPJ para criar números válidos para testes.",
+            generatorLink: "gerador de CNPJ",
+            relatedTools: "Ferramentas relacionadas",
+            validatorCPF: "Validador de CPF",
+            validatorCPFDescription: "Verifique se um CPF é válido",
+            generateCNPJ: "Gerador de CNPJ",
+            generateCNPJDescription: "Gere CNPJs válidos para testes",
             footer: "© 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste."
         },
         en: {
-            validateCPF: "CPF Validator",
-            about: "What is a CPF?",
-            aboutText: "The CPF (Cadastro de Pessoas Físicas) is a Brazilian document used for tax identification. Our validator checks if a CPF follows the official rules.",
+            validateCNPJ: "CNPJ Validator",
+            about: "What is a CNPJ?",
+            aboutText: "The CNPJ (National Registry of Legal Entities) is a unique number that identifies a company with the Federal Revenue Service. Our validator checks if a CNPJ follows the official rules.",
             usage: "How to use this validator?",
-            usage1: "Paste the generated CPF to check its validity",
-            usage2: "Test systems that require CPF validation",
-            usage3: "Check CPFs in development forms",
-            disclaimer: "Tip: Use our CPF generator to create valid numbers for testing.",
+            usage1: "Paste the generated CNPJ to check its validity",
+            usage2: "Test systems that require CNPJ validation",
+            usage3: "Check CNPJs in development forms",
+            disclaimer: "Tip: Use our CNPJ generator to create valid numbers for testing.",
             tools: "Other tools",
-            validate: "Validate CPF",
-            enterCPF: "Enter CPF",
-            validCPF: "Valid CPF!",
-            invalidCPF: "Invalid CPF!",
+            validate: "Validate CNPJ",
+            validateButton: "Validate CNPJ",
+            enterCNPJ: "Enter CNPJ",
+            validCNPJ: "Valid CNPJ!",
+            invalidCNPJ: "Invalid CNPJ!",
             faqTitle: "Frequently Asked Questions",
-            faq1: "Does the validator check if the CPF exists?",
+            faq1: "Does the validator check if the CNPJ exists?",
             faq1Text: "No, we only check if the number follows the official algorithm. We don't have access to Federal Revenue records.",
-            faq2: "Can I validate formatted CPFs?",
-            faq2Text: "Yes, our validator recognizes CPFs in the format 000.000.000-00 or just the numbers.",
-            faq3: "How to generate valid CPFs?",
-            faq3Text: "Use our CPF generator to create valid numbers for testing.",
-            generateCPF: "CPF Generator",
-            generateCPFDescription: "Generate valid CPFs for testing",
-            validatorCNPJ: "CNPJ Validator",
-            validatorCNPJDescription: "Check if a CNPJ is valid",
+            faq2: "Can I validate formatted CNPJs?",
+            faq2Text: "Yes, our validator recognizes CNPJs in the format 00.000.000/0000-00 or just the numbers.",
+            faq3: "How to generate valid CNPJs?",
+            faq3Text: "Use our CNPJ generator to create valid numbers for testing.",
+            generatorLink: "CNPJ generator",
+            relatedTools: "Related Tools",
+            validatorCPF: "CPF Validator",
+            validatorCPFDescription: "Check if a CPF is valid",
+            generateCNPJ: "CNPJ Generator",
+            generateCNPJDescription: "Generate valid CNPJs for testing",
             footer: "© 2025 AllHelp.online | Developer Tools. Exclusive use for testing purposes."
         }
     };
 
     window.onload = () => switchLang('pt');
 
-    function validateCPF() {
-        const cpf = document.getElementById('cpfInput').value.replace(/\D/g, '');
+    function validateCNPJ() {
+        const cnpj = document.getElementById('cnpjInput').value.replace(/\D/g, '');
         const resultBox = document.getElementById('result');
         const resultText = document.getElementById('resultText');
 
-        if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
-            resultText.innerText = i18n[document.documentElement.lang].invalidCPF;
+        if (cnpj.length !== 14 || /^(\d)\1+$/.test(cnpj)) {
+            resultText.innerText = i18n[document.documentElement.lang].invalidCNPJ;
             resultBox.className = "result-box invalid";
             resultBox.style.display = "block";
             return;
         }
 
-        let sum = 0, remainder;
-        for (let i = 1; i <= 9; i++) sum += parseInt(cpf[i - 1]) * (11 - i);
-        remainder = (sum * 10) % 11;
-        if (remainder === 10 || remainder === 11) remainder = 0;
-        if (remainder !== parseInt(cpf[9])) {
-            resultText.innerText = i18n[document.documentElement.lang].invalidCPF;
+        // Validação do primeiro dígito verificador
+        let length = 12;
+        let numbers = cnpj.substring(0, length);
+        let digits = cnpj.substring(length);
+        let sum = 0;
+        let pos = length - 7;
+
+        for (let i = length; i >= 1; i--) {
+            sum += numbers.charAt(length - i) * pos--;
+            if (pos < 2) pos = 9;
+        }
+
+        let result = sum % 11 < 2 ? 0 : 11 - sum % 11;
+
+        if (result != digits.charAt(0)) {
+            resultText.innerText = i18n[document.documentElement.lang].invalidCNPJ;
             resultBox.className = "result-box invalid";
             resultBox.style.display = "block";
             return;
         }
 
+        // Validação do segundo dígito verificador
+        length = length + 1;
+        numbers = cnpj.substring(0, length);
         sum = 0;
-        for (let i = 1; i <= 10; i++) sum += parseInt(cpf[i - 1]) * (12 - i);
-        remainder = (sum * 10) % 11;
-        if (remainder === 10 || remainder === 11) remainder = 0;
+        pos = length - 7;
 
-        if (remainder === parseInt(cpf[10])) {
-            resultText.innerText = i18n[document.documentElement.lang].validCPF;
-            resultBox.className = "result-box valid";
-        } else {
-            resultText.innerText = i18n[document.documentElement.lang].invalidCPF;
-            resultBox.className = "result-box invalid";
+        for (let i = length; i >= 1; i--) {
+            sum += numbers.charAt(length - i) * pos--;
+            if (pos < 2) pos = 9;
         }
+
+        result = sum % 11 < 2 ? 0 : 11 - sum % 11;
+
+        if (result != digits.charAt(1)) {
+            resultText.innerText = i18n[document.documentElement.lang].invalidCNPJ;
+            resultBox.className = "result-box invalid";
+            resultBox.style.display = "block";
+            return;
+        }
+
+        resultText.innerText = i18n[document.documentElement.lang].validCNPJ;
+        resultBox.className = "result-box valid";
         resultBox.style.display = "block";
     }
 

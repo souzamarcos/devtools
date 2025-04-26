@@ -209,7 +209,7 @@
             margin-bottom: 1rem;
         }
         .gerar-cpf button {
-            background-color: #007bff;
+            background-color: #333333;
             color: white;
             border: none;
             padding: 0.6rem 1.2rem;
@@ -285,7 +285,7 @@
         .tool-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-color: #007bff;
+            border-color: #333333;
         }
 
         .tool-icon {
@@ -297,7 +297,7 @@
         .tool-content h4 {
             font-size: 1rem;
             margin-bottom: 0.5rem;
-            color: #007bff;
+            color: #333333;
             text-align: center;
         }
 
@@ -323,7 +323,7 @@
         <button onclick="switchLang('en')">EN</button>
     </div>
     <nav>
-        <a href="index" data-i18n="tools">Outras ferramentas</a>
+        <a href="./" data-i18n="tools">Outras ferramentas</a>
     </nav>
     <h1 data-i18n="cpf">Gerador de CPF</h1>
     <div class="gerar-cpf" style="text-align:center">
@@ -344,7 +344,7 @@
             <span data-i18n="formatOption">Adicionar ponto e traço</span>
         </p>
         <button class="generate-button" onclick="generateCPF()">
-            <span class="icon">🔄</span> <span data-i18n="generateCPF">Gerar CPF Agora</span>
+            <span class="icon">🔄</span> <span data-i18n="generateCPF">Gerar CPF</span>
         </button>
         <div id="result" style="margin-top: 1rem; font-size: 1.5rem; text-align: center; font-weight: bold;">
             <div id="cpf"
@@ -423,7 +423,7 @@
             checkOtherTool: "Veja nossa ferramenta para validar CPF",
             cpf: "Gerador de CPF",
             tools: "Outras ferramentas",
-            generateCPF: "Gerar CPF Agora",
+            generateCPF: "Gerar CPF",
             formatCPF: "Gerar com ponto e traço",
             copy: "Copiar",
             clear: "Limpar",

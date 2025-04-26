@@ -200,7 +200,7 @@
         }
         /* Botões e resultados */
         .gerar-cnpj button {
-            background-color: #007bff;
+            background-color: #333333;
             color: white;
             border: none;
             padding: 0.6rem 1.2rem;
@@ -268,7 +268,7 @@
         .tool-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-color: #007bff;
+            border-color: #333333;
         }
         .tool-icon {
             font-size: 1.8rem;
@@ -278,7 +278,7 @@
         .tool-content h4 {
             font-size: 1rem;
             margin-bottom: 0.5rem;
-            color: #007bff;
+            color: #333333;
             text-align: center;
         }
         .tool-content p {
@@ -301,7 +301,7 @@
         <button onclick="switchLang('en')">EN</button>
     </div>
     <nav>
-        <a href="index" data-i18n="tools">Outras ferramentas</a>
+        <a href="./" data-i18n="tools">Outras ferramentas</a>
     </nav>
     <h1 data-i18n="cnpj">Gerador de CNPJ</h1>
     <div class="gerar-cnpj" style="text-align:center">
@@ -322,7 +322,7 @@
             <span data-i18n="formatOption">Adicionar formatação (pontos, barra e traço)</span>
         </p>
         <button class="generate-button" onclick="generateCNPJ()">
-            <span class="icon">🔄</span> <span data-i18n="generateCNPJ">Gerar CNPJ Agora</span>
+            <span class="icon">🔄</span> <span data-i18n="generateCNPJ">Gerar CNPJ</span>
         </button>
         <div id="result" style="margin-top: 1rem; font-size: 1.5rem; text-align: center; font-weight: bold;">
             <div id="cnpj"
@@ -369,13 +369,13 @@
                     <p data-i18n="generateCPFDescription">Gere CPFs válidos para testes</p>
                 </div>
             </a>
-<!--            <a href="./validador-cnpj" class="tool-card">-->
-<!--                <div class="tool-icon">🔍</div>-->
-<!--                <div class="tool-content">-->
-<!--                    <h4 data-i18n="validatorCNPJ">Validador de CNPJ</h4>-->
-<!--                    <p data-i18n="validatorCNPJDescription">Verifique se um CNPJ é válido</p>-->
-<!--                </div>-->
-<!--            </a>-->
+            <a href="./validador-de-cnpj-online" class="tool-card">
+                <div class="tool-icon">🔍</div>
+                <div class="tool-content">
+                    <h4 data-i18n="validatorCNPJ">Validador de CNPJ</h4>
+                    <p data-i18n="validatorCNPJDescription">Verifique se um CNPJ é válido</p>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -396,7 +396,7 @@
             title: "Ferramentas para Devs",
             cnpj: "Gerador de CNPJ",
             tools: "Outras ferramentas",
-            generateCNPJ: "Gerar CNPJ Agora",
+            generateCNPJ: "Gerar CNPJ",
             formatCNPJ: "Adicionar formatação (pontos, barra e traço)",
             copy: "Copiar",
             clear: "Limpar",
