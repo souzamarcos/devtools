@@ -29,6 +29,10 @@
           text-align: center;
           font-weight: bold;
         }
+        .ads {
+          margin-top: 2rem;
+          text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -44,6 +48,16 @@
     <div class="gerar-cpf" style="text-align:center">
         <button onclick="gerarCPF()" data-i18n="generateCPF">Gerar CPF</button>
         <div id="cpf"></div>
+    </div>
+
+    <div id="ads-bottom">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8817189280217840"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+
     </div>
 </div>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8817189280217840" crossorigin="anonymous"></script>
@@ -78,6 +92,8 @@
       const cpf = `${n1}${n2}${n3}.${n4}${n5}${n6}.${n7}${n8}${n9}-${d1}${d2}`;
       document.getElementById('cpf').innerText = cpf;
     }
+
+    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </body>
 </html>

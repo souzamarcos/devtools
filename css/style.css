@@ -25,6 +25,14 @@ h1 {
   font-weight: 600;
   text-align: center;
 }
+#ads-bottom {
+  margin-top: 2rem;
+  text-align: center;
+}
+#ads-center {
+  margin-bottom: 2rem;
+  text-align: center;
+}
 /* ##################  Menu ###################### */
 nav {
   display: flex;
