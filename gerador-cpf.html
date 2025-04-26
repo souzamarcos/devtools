@@ -57,7 +57,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        button {
+        button.action {
             margin-top: 2rem;
         }
         button:hover {
@@ -93,7 +93,7 @@
 
         <br>
 
-        <button onclick="generateCPF()" data-i18n="generateCPF">Gerar CPF</button>
+        <button class="action" onclick="generateCPF()" data-i18n="generateCPF">Gerar CPF</button>
         <br>
         <label>
             <input type="checkbox" id="formatCPF" onclick="isCPFEmpty() ? null : generateCPF()" checked />
