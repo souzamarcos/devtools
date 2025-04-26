@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validador de CPF</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .validar-cpf button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        .ads {
+            margin-top: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <button onclick="switchLang('pt');clearResult();">PT</button>
+        <button onclick="switchLang('en');clearResult();">EN</button>
+    </div>
+    <nav>
+        <a href="index.html" data-i18n="tools">Outras ferramentas</a>
+    </nav>
+    <h1 data-i18n="validateCPF">Validador de CPF</h1>
+    <div class="validar-cpf" style="text-align:center">
+        <input type="text" id="cpfInput" placeholder="Digite o CPF" data-placeholder-i18n="enterCPF" />
+        <br><br>
+        <button onclick="validateCPF()" data-i18n="validate">Validar CPF</button>
+        <div id="result"></div>
+    </div>
+
+    <div id="ads-bottom">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8817189280217840"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8817189280217840" crossorigin="anonymous"></script>
+<script src="js/general.js"></script>
+<script>
+    const i18n = {
+        pt: {
+            validateCPF: "Validador de CPF",
+            tools: "Outras ferramentas",
+            validate: "Validar CPF",
+            enterCPF: "Digite o CPF",
+            validCPF: "CPF válido!",
+            invalidCPF: "CPF inválido!"
+        },
+        en: {
+            validateCPF: "CPF Validator",
+            tools: "Other tools",
+            validate: "Validate CPF",
+            enterCPF: "Enter CPF",
+            validCPF: "Valid CPF!",
+            invalidCPF: "Invalid CPF!"
+        }
+    };
+
+    window.onload = () => switchLang('pt');
+
+    function validateCPF() {
+        const cpf = document.getElementById('cpfInput').value.replace(/\D/g, '');
+        if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+            document.getElementById('result').innerText = i18n[document.documentElement.lang].invalidCPF;
+            return;
+        }
+        let sum = 0, remainder;
+        for (let i = 1; i <= 9; i++) sum += parseInt(cpf[i - 1]) * (11 - i);
+        remainder = (sum * 10) % 11;
+        if (remainder === 10 || remainder === 11) remainder = 0;
+        if (remainder !== parseInt(cpf[9])) {
+            document.getElementById('result').innerText = i18n[document.documentElement.lang].invalidCPF;
+            return;
+        }
+        sum = 0;
+        for (let i = 1; i <= 10; i++) sum += parseInt(cpf[i - 1]) * (12 - i);
+        remainder = (sum * 10) % 11;
+        if (remainder === 10 || remainder === 11) remainder = 0;
+        document.getElementById('result').innerText = remainder === parseInt(cpf[10])
+            ? i18n[document.documentElement.lang].validCPF
+            : i18n[document.documentElement.lang].invalidCPF;
+    }
+
+    function clearResult() {
+        document.getElementById('result').innerText = '';
+    }
+
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
+</html>

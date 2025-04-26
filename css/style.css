@@ -33,6 +33,16 @@ h1 {
   margin-bottom: 2rem;
   text-align: center;
 }
+input {
+    position: relative;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+
+}
 /* ##################  Menu ###################### */
 nav {
   display: flex;
