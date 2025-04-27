@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Calculadora de Regra de Três Simples Online | Gratuito e Rápido | AllHelp</title>
+
+    <!-- SEO -->
+    <meta name="description"
+          content="Resolva problemas de proporção facilmente com nossa calculadora de regra de três simples. Ferramenta online gratuita para estudantes e profissionais.">
+    <link rel="canonical" href="https://allhelp.online/calculadora-regra-de-tres"/>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="pt_BR"/>
+    <meta property="og:title" content="Calculadora de Regra de Três Simples Online e Grátis"/>
+    <meta property="og:description"
+          content="Resolva problemas de proporção com nossa ferramenta gratuita para estudantes e profissionais."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://allhelp.online/calculadora-regra-de-tres"/>
+    <meta property="og:image" content="https://allhelp.online/img/allhelp.png"/>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Calculadora de Regra de Três Simples Online e Grátis"/>
+    <meta name="twitter:description"
+          content="Ferramenta para resolver problemas de proporção diretamente no navegador."/>
+    <meta name="twitter:image" content="https://allhelp.online/img/allhelp.png"/>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://allhelp.online/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://allhelp.online/favicon.ico" type="image/x-icon">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Calculadora de Regra de Três",
+            "description": "Ferramenta online gratuita para resolver problemas de proporção usando regra de três simples",
+            "url": "https://allhelp.online/calculadora-regra-de-tres",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "BRL"
+            },
+            "creator": {
+                "@type": "Organization",
+                "name": "AllHelp"
+            }
+        }
+    </script>
+
+    <style>
+        /* Geral */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fafafa;
+            color: #333;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            position: relative;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        ul {
+            margin-bottom: 1rem;
+        }
+        #ads-bottom {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        #ads-center {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        input {
+            position: relative;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-align: center;
+            width: 80px;
+        }
+        /* */
+        /* Menu */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        nav .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 6px;
+            padding: 0.5rem 0;
+        }
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        nav .dropdown-content a {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #333;
+        }
+        nav .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #e0e0e0;
+        }
+        /* */
+        /* Idiomas */
+        .lang-switcher {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        .lang-switcher button {
+            margin-left: 0.5rem;
+            padding: 0.3rem 0.6rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            background-color: #e0e0e0;
+        }
+        .lang-switcher button:hover {
+            background-color: #ccc;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        /* */
+        .content-section {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .faq-section {
+            margin-top: 3rem;
+            padding: 1rem;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .calculate-rule button {
+            background-color: #333333;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .calculate-rule button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        button.action {
+            margin-top: 2rem;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .calculate-button {
+            margin-bottom: 1rem;
+        }
+        #result {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        .rule-three-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .rule-three-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .input-text-column {
+            width: 100px;
+        }
+        .buttons {
+            margin-top: 1rem;
+        }
+        .ads {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        /* Estilos para os cards de ferramentas relacionadas */
+        .related-tools {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            padding: 1rem;
+        }
+
+        .related-tools h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            color: #333;
+        }
+
+        .tool-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tool-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #333333;
+        }
+
+        .tool-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+            text-align: center;
+        }
+
+        .tool-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #333333;
+            text-align: center;
+        }
+
+        .tool-content p {
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .tool-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* */
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <button onclick="switchLang('pt')">PT</button>
+        <button onclick="switchLang('en')">EN</button>
+    </div>
+    <nav>
+        <a href="./" data-i18n="tools">Outras ferramentas</a>
+    </nav>
+    <h1 data-i18n="title">Calculadora de Regra de Três</h1>
+    <div class="calculate-rule" style="text-align:center">
+        <div class="rule-three-container">
+            <div class="rule-three-row">
+                <input type="number" id="valueA" placeholder="A" min="0" step="any">
+                <span class="input-text-column" data-i18n="isTo">está para</span>
+                <input type="number" id="valueB" placeholder="B" min="0" step="any">
+            </div>
+            <div class="rule-three-row">
+                <input type="number" id="valueC" placeholder="C" min="0" step="any">
+                <span class="input-text-column" data-i18n="as">assim como</span>
+                <input type="number" id="valueX" placeholder="X" disabled>
+            </div>
+
+            <div class="buttons">
+                <button class="calculate-button" onclick="calculateRuleOfThree()" data-i18n="calculate">Calcular
+                </button>
+                <button onclick="clearFields()" data-i18n="clear">Limpar</button>
+            </div>
+            <div id="result"
+                 style="margin-top: 1rem; padding: 1rem; border: 1px solid #ccc; border-radius: 5px; display: none;">
+                <span data-i18n="resultText">O valor de X é:</span>
+                <span id="resultValue" style="font-weight: bold;"></span>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2 data-i18n="about">O que é regra de três?</h2>
+            <p data-i18n="aboutText">A regra de três é um método matemático para resolver problemas de proporção entre
+                grandezas. Com três valores conhecidos, podemos encontrar o quarto valor desconhecido.</p>
+
+            <h2 data-i18n="usage">Para que serve esta calculadora?</h2>
+            <ul>
+                <li data-i18n="usage1">Resolver problemas matemáticos</li>
+                <li data-i18n="usage2">Calcular proporções em receitas</li>
+                <li data-i18n="usage3">Conversão de unidades de medida</li>
+                <li data-i18n="usage4">Cálculos financeiros simples</li>
+            </ul>
+            <p data-i18n="disclaimer"><strong>Dica:</strong> Certifique-se de que as grandezas são diretamente
+                proporcionais para usar a regra de três simples.</p>
+        </div>
+    </div>
+
+    <div id="ads-bottom">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8817189280217840"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+    <div class="faq-section">
+        <h2 data-i18n="faqTitle">Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3 data-i18n="faq1">Quando usar regra de três simples?</h3>
+            <p data-i18n="faq1Text">Use quando as grandezas são diretamente proporcionais - se uma aumenta, a outra
+                aumenta na mesma proporção.</p>
+        </div>
+        <div class="faq-item">
+            <h3 data-i18n="faq2">Qual a diferença para regra de três composta?</h3>
+            <p data-i18n="faq2Text">A regra de três composta envolve mais de duas grandezas relacionadas, enquanto a
+                simples trabalha com apenas duas grandezas.</p>
+        </div>
+        <div class="faq-item">
+            <h3 data-i18n="faq3">Posso usar com números decimais?</h3>
+            <p data-i18n="faq3Text">Sim, nossa calculadora aceita números inteiros e decimais para cálculos
+                precisos.</p>
+        </div>
+    </div>
+    <div class="related-tools">
+        <h3 data-i18n="relatedTools">Ferramentas relacionadas</h3>
+        <div class="tool-cards">
+            <a href="./gerador-de-cpf-online" class="tool-card">
+                <div class="tool-icon">👤</div>
+                <div class="tool-content">
+                    <h4 data-i18n="generateCPF">Gerador de CPF</h4>
+                    <p data-i18n="generateCPFDescription">Gere CPFs válidos para testes</p>
+                </div>
+            </a>
+            <a href="./validador-de-cnpj-online" class="tool-card">
+                <div class="tool-icon">🔍</div>
+                <div class="tool-content">
+                    <h4 data-i18n="validatorCNPJ">Validador de CNPJ</h4>
+                    <p data-i18n="validatorCNPJDescription">Verifique se um CNPJ é válido</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--  <div class="related-tools">-->
+    <!--    <h3 data-i18n="relatedTools">Ferramentas relacionadas</h3>-->
+    <!--    <div class="tool-cards">-->
+    <!--      <a href="./calculadora-porcentagem" class="tool-card">-->
+    <!--        <div class="tool-icon">%</div>-->
+    <!--        <div class="tool-content">-->
+    <!--          <h4 data-i18n="percentageCalc">Calculadora de Porcentagem</h4>-->
+    <!--          <p data-i18n="percentageCalcDescription">Calcule aumentos, descontos e diferenças percentuais</p>-->
+    <!--        </div>-->
+    <!--      </a>-->
+
+    <!--      <a href="./calculadora-juros-simples" class="tool-card">-->
+    <!--        <div class="tool-icon">💰</div>-->
+    <!--        <div class="tool-content">-->
+    <!--          <h4 data-i18n="interestCalc">Calculadora de Juros</h4>-->
+    <!--          <p data-i18n="interestCalcDescription">Calcule juros simples e compostos para investimentos</p>-->
+    <!--        </div>-->
+    <!--      </a>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <footer>
+        <p data-i18n="footer" style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
+            © 2025 AllHelp.online | Ferramentas para Educação e Finanças.
+        </p>
+    </footer>
+</div>
+
+<!-- Scripts -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8817189280217840"
+        crossorigin="anonymous"></script>
+<script>
+    const i18n = {
+        pt: {
+            title: "Calculadora de Regra de Três",
+            about: "O que é regra de três?",
+            aboutText: "A regra de três é um método matemático para resolver problemas de proporção entre grandezas. Com três valores conhecidos, podemos encontrar o quarto valor desconhecido.",
+            usage: "Para que serve esta calculadora?",
+            usage1: "Resolver problemas matemáticos",
+            usage2: "Calcular proporções em receitas",
+            usage3: "Conversão de unidades de medida",
+            usage4: "Cálculos financeiros simples",
+            disclaimer: "Dica: Certifique-se de que as grandezas são diretamente proporcionais para usar a regra de três simples.",
+            isTo: "está para",
+            as: "assim como",
+            calculate: "Calcular",
+            clear: "Limpar",
+            resultText: "O valor de X é:",
+            faqTitle: "Perguntas Frequentes",
+            faq1: "Quando usar regra de três simples?",
+            faq1Text: "Use quando as grandezas são diretamente proporcionais - se uma aumenta, a outra aumenta na mesma proporção.",
+            faq2: "Qual a diferença para regra de três composta?",
+            faq2Text: "A regra de três composta envolve mais de duas grandezas relacionadas, enquanto a simples trabalha com apenas duas grandezas.",
+            faq3: "Posso usar com números decimais?",
+            faq3Text: "Sim, nossa calculadora aceita números inteiros e decimais para cálculos precisos.",
+            relatedTools: "Ferramentas relacionadas",
+            percentageCalc: "Calculadora de Porcentagem",
+            percentageCalcDescription: "Calcule aumentos, descontos e diferenças percentuais",
+            interestCalc: "Calculadora de Juros",
+            interestCalcDescription: "Calcule juros simples e compostos para investimentos",
+            tools: "Outras ferramentas",
+            footer: "© 2025 AllHelp.online | Ferramentas para Educação e Finanças.",
+            generateCPF: "Gerador de CPF",
+            generateCPFDescription: "Gere CPFs válidos para testes",
+            validatorCNPJ: "Validador de CNPJ",
+            validatorCNPJDescription: "Verifique se um CNPJ é válido",
+
+        },
+        en: {
+            title: "Rule of Three Calculator",
+            about: "What is the rule of three?",
+            aboutText: "The rule of three is a mathematical method for solving proportion problems between quantities. With three known values, we can find the fourth unknown value.",
+            usage: "What is this calculator for?",
+            usage1: "Solving math problems",
+            usage2: "Calculating recipe proportions",
+            usage3: "Unit conversion",
+            usage4: "Simple financial calculations",
+            disclaimer: "Tip: Make sure the quantities are directly proportional to use the simple rule of three.",
+            isTo: "is to",
+            as: "as",
+            calculate: "Calculate",
+            clear: "Clear",
+            resultText: "The value of X is:",
+            faqTitle: "Frequently Asked Questions",
+            faq1: "When to use simple rule of three?",
+            faq1Text: "Use when quantities are directly proportional - if one increases, the other increases in the same proportion.",
+            faq2: "Difference to compound rule of three?",
+            faq2Text: "The compound rule of three involves more than two related quantities, while the simple one works with only two quantities.",
+            faq3: "Can I use with decimal numbers?",
+            faq3Text: "Yes, our calculator accepts whole and decimal numbers for precise calculations.",
+            relatedTools: "Related Tools",
+            percentageCalc: "Percentage Calculator",
+            percentageCalcDescription: "Calculate increases, discounts and percentage differences",
+            interestCalc: "Interest Calculator",
+            interestCalcDescription: "Calculate simple and compound interest for investments",
+            tools: "Other tools",
+            footer: "© 2025 AllHelp.online | Education and Finance Tools.",
+            generateCPF: "CPF Generator",
+            generateCPFDescription: "Generate valid CPFs for testing",
+            validatorCNPJ: "CNPJ Validator",
+            validatorCNPJDescription: "Check if a CNPJ is valid",
+        }
+    };
+
+    function switchLang(lang) {
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (i18n[lang][key]) {
+                el.textContent = i18n[lang][key];
+            }
+        });
+    }
+
+    function calculateRuleOfThree() {
+        const a = parseFloat(document.getElementById('valueA').value);
+        const b = parseFloat(document.getElementById('valueB').value);
+        const c = parseFloat(document.getElementById('valueC').value);
+
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            alert(i18n[document.documentElement.lang === 'pt-BR' ? 'pt' : 'en']['faq3Text']);
+            return;
+        }
+
+        if (b === 0) {
+            alert(i18n[document.documentElement.lang === 'pt-BR' ? 'pt' : 'en']['faq1Text']);
+            return;
+        }
+
+        const x = (c * b) / a;
+        document.getElementById('valueX').value = x.toFixed(2);
+
+        const resultDiv = document.getElementById('result');
+        document.getElementById('resultValue').textContent = x.toFixed(2);
+        resultDiv.style.display = 'block';
+    }
+
+    function clearFields() {
+        document.getElementById('valueA').value = '';
+        document.getElementById('valueB').value = '';
+        document.getElementById('valueC').value = '';
+        document.getElementById('valueX').value = '';
+        document.getElementById('result').style.display = 'none';
+    }
+
+    window.onload = () => {
+        switchLang('pt');
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    };
+</script>
+</body>
+</html>

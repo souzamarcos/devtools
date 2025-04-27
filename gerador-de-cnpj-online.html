@@ -227,8 +227,11 @@
             font-weight: bold;
         }
         p.format-option {
-            margin-top: 1rem;
+            margin-bottom: 1rem;
             text-align: center;
+        }
+        p.format-option input {
+            vertical-align: middle;
         }
         .ads {
             margin-top: 2rem;
@@ -304,6 +307,29 @@
     </nav>
     <h1 data-i18n="cnpj">Gerador de CNPJ</h1>
     <div class="gerar-cnpj" style="text-align:center">
+        <button class="generate-button" onclick="generateCNPJ()">
+            <span class="icon">🔄</span> <span data-i18n="generateCNPJ">Gerar CNPJ</span>
+        </button>
+        <p class="format-option">
+            <input type="checkbox" id="formatCNPJ" aria-label="Formatar" onclick="isCNPJEmpty() ? null : generateCNPJ()" checked />
+            <span data-i18n="formatOption">Adicionar formatação (pontos, barra e traço)</span>
+        </p>
+        <div id="result" style="margin-top: 1rem; font-size: 1.5rem; text-align: center; font-weight: bold;">
+            <div id="cnpj"
+                 style="position: relative; padding: 1rem; border: 1px solid #ccc; border-radius: 5px; text-align: center;"></div>
+            <div style="top: 5px; right: 5px;; gap: 5px;">
+                <button onclick="copyCNPJ()" data-i18n="copy" style="font-size: 0.8rem; padding: 0.2rem 0.4rem;">Copiar</button>
+                <button onclick="clearCNPJ()" data-i18n="clear" style="font-size: 0.8rem; padding: 0.2rem 0.4rem;">Limpar</button>
+            </div>
+        </div>
+        <div id="ads-bottom">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8817189280217840"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
         <div class="content-section">
             <h2 data-i18n="about">O que é um CNPJ?</h2>
             <p data-i18n="aboutText">O CNPJ (Cadastro Nacional da Pessoa Jurídica) é um número único que identifica uma empresa perante a Receita Federal. Nosso gerador cria números válidos apenas para fins de teste e desenvolvimento.</p>
@@ -316,31 +342,9 @@
             </ul>
             <p data-i18n="disclaimer"><strong>Atenção:</strong> Os CNPJs gerados são fictícios e não devem ser usados para fins ilegais.</p>
         </div>
-        <p class="format-option">
-            <input type="checkbox" id="formatCNPJ" aria-label="Formatar" onclick="isCNPJEmpty() ? null : generateCNPJ()" checked />
-            <span data-i18n="formatOption">Adicionar formatação (pontos, barra e traço)</span>
-        </p>
-        <button class="generate-button" onclick="generateCNPJ()">
-            <span class="icon">🔄</span> <span data-i18n="generateCNPJ">Gerar CNPJ</span>
-        </button>
-        <div id="result" style="margin-top: 1rem; font-size: 1.5rem; text-align: center; font-weight: bold;">
-            <div id="cnpj"
-                 style="position: relative; padding: 1rem; border: 1px solid #ccc; border-radius: 5px; text-align: center;"></div>
-            <div style="top: 5px; right: 5px;; gap: 5px;">
-                <button onclick="copyCNPJ()" data-i18n="copy" style="font-size: 0.8rem; padding: 0.2rem 0.4rem;">Copiar</button>
-                <button onclick="clearCNPJ()" data-i18n="clear" style="font-size: 0.8rem; padding: 0.2rem 0.4rem;">Limpar</button>
-            </div>
-        </div>
     </div>
 
-    <div id="ads-bottom">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-8817189280217840"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-    </div>
+
 
     <div class="faq-section">
         <h2 data-i18n="faqTitle">Perguntas Frequentes</h2>
