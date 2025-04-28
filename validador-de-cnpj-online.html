@@ -106,6 +106,15 @@
             width: 100%;
             max-width: 300px;
         }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        footer p {
+            margin: 0;
+        }
         /* Menu */
         nav {
             display: flex;
@@ -318,14 +327,15 @@
     </div>
 
     <nav>
-        <a href="./" data-i18n="tools">Outras ferramentas</a>
+        <a href="./" data-i18n="tools">Ferramentas</a>
+        <a href="./sobre" data-i18n="about">Sobre</a>
     </nav>
 
     <h1 data-i18n="validateCNPJ">Validador de CNPJ</h1>
 
     <div class="validar-cnpj" style="text-align:center">
         <div class="content-section">
-            <h2 data-i18n="about">O que é um CNPJ?</h2>
+            <h2 data-i18n="aboutTitle">O que é um CNPJ?</h2>
             <p data-i18n="aboutText">O CNPJ (Cadastro Nacional da Pessoa Jurídica) é um número único que identifica uma empresa perante a Receita Federal. Nosso validador verifica se um CNPJ segue as regras oficiais.</p>
 
             <h2 data-i18n="usage">Como usar este validador?</h2>
@@ -394,7 +404,7 @@
     </div>
 
     <footer>
-        <p data-i18n="footer">© 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.</p>
+        <p><span data-i18n="footer">&copy; 2025 AllHelp.online | </span><a href="./politica-de-privacidade" data-i18n="privacyLink">Política de Privacidade</a> | <a href="./termos-de-uso" data-i18n="termsLink">Termos de Uso</a></p>
     </footer>
 </div>
 
@@ -406,14 +416,15 @@
     const i18n = {
         pt: {
             validateCNPJ: "Validador de CNPJ",
-            about: "O que é um CNPJ?",
+            aboutTitle: "O que é um CNPJ?",
             aboutText: "O CNPJ (Cadastro Nacional da Pessoa Jurídica) é um número único que identifica uma empresa perante a Receita Federal. Nosso validador verifica se um CNPJ segue as regras oficiais.",
             usage: "Como usar este validador?",
             usage1: "Cole o CNPJ gerado para verificar sua validade",
             usage2: "Teste sistemas que exigem validação de CNPJ",
             usage3: "Verifique CNPJs em formulários de desenvolvimento",
             disclaimer: "Dica: Use nosso gerador de CNPJ para criar números válidos para teste.",
-            tools: "Outras ferramentas",
+            tools: "Ferramentas",
+            about: "Sobre",
             validate: "Validar CNPJ",
             validateButton: "Validar CNPJ",
             enterCNPJ: "Digite o CNPJ",
@@ -432,11 +443,13 @@
             validatorCPFDescription: "Verifique se um CPF é válido",
             generateCNPJ: "Gerador de CNPJ",
             generateCNPJDescription: "Gere CNPJs válidos para testes",
-            footer: "© 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste."
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Política de Privacidade",
+            termsLink: "Termos de Uso",
         },
         en: {
             validateCNPJ: "CNPJ Validator",
-            about: "What is a CNPJ?",
+            aboutTitle: "What is a CNPJ?",
             aboutText: "The CNPJ (National Registry of Legal Entities) is a unique number that identifies a company with the Federal Revenue Service. Our validator checks if a CNPJ follows the official rules.",
             usage: "How to use this validator?",
             usage1: "Paste the generated CNPJ to check its validity",
@@ -444,6 +457,7 @@
             usage3: "Check CNPJs in development forms",
             disclaimer: "Tip: Use our CNPJ generator to create valid numbers for testing.",
             tools: "Other tools",
+            about: "About",
             validate: "Validate CNPJ",
             validateButton: "Validate CNPJ",
             enterCNPJ: "Enter CNPJ",
@@ -462,7 +476,9 @@
             validatorCPFDescription: "Check if a CPF is valid",
             generateCNPJ: "CNPJ Generator",
             generateCNPJDescription: "Generate valid CNPJs for testing",
-            footer: "© 2025 AllHelp.online | Developer Tools. Exclusive use for testing purposes."
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Privacy Policy",
+            termsLink: "Terms of Use",
         }
     };
 

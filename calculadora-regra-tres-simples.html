@@ -107,6 +107,15 @@
             text-align: center;
             width: 80px;
         }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        footer p {
+            margin: 0;
+        }
         /* */
         /* Menu */
         nav {
@@ -336,7 +345,8 @@
         <button onclick="switchLang('en')">EN</button>
     </div>
     <nav>
-        <a href="./" data-i18n="tools">Outras ferramentas</a>
+        <a href="./" data-i18n="tools">Ferramentas</a>
+        <a href="./sobre" data-i18n="about">Sobre</a>
     </nav>
     <h1 data-i18n="title">Calculadora de Regra de Três</h1>
     <div class="calculate-rule" style="text-align:center">
@@ -371,7 +381,7 @@
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
         <div class="content-section">
-            <h2 data-i18n="about">O que é regra de três?</h2>
+            <h2 data-i18n="aboutTitle">O que é regra de três?</h2>
             <p data-i18n="aboutText">A regra de três é um método matemático para resolver problemas de proporção entre
                 grandezas. Com três valores conhecidos, podemos encontrar o quarto valor desconhecido.</p>
 
@@ -447,9 +457,7 @@
     <!--    </div>-->
     <!--  </div>-->
     <footer>
-        <p data-i18n="footer" style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
-            © 2025 AllHelp.online | Ferramentas para Educação e Finanças.
-        </p>
+        <p><span data-i18n="footer">&copy; 2025 AllHelp.online | </span><a href="./politica-de-privacidade" data-i18n="privacyLink">Política de Privacidade</a> | <a href="./termos-de-uso" data-i18n="termsLink">Termos de Uso</a></p>
     </footer>
 </div>
 
@@ -460,7 +468,7 @@
     const i18n = {
         pt: {
             title: "Calculadora de Regra de Três",
-            about: "O que é regra de três?",
+            aboutTitle: "O que é regra de três?",
             aboutText: "A regra de três é um método matemático para resolver problemas de proporção entre grandezas. Com três valores conhecidos, podemos encontrar o quarto valor desconhecido.",
             usage: "Para que serve esta calculadora?",
             usage1: "Resolver problemas matemáticos",
@@ -485,8 +493,10 @@
             percentageCalcDescription: "Calcule aumentos, descontos e diferenças percentuais",
             interestCalc: "Calculadora de Juros",
             interestCalcDescription: "Calcule juros simples e compostos para investimentos",
-            tools: "Outras ferramentas",
-            footer: "© 2025 AllHelp.online | Ferramentas para Educação e Finanças.",
+            tools: "Ferramentas",
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Política de Privacidade",
+            termsLink: "Termos de Uso",
             generateCPF: "Gerador de CPF",
             generateCPFDescription: "Gere CPFs válidos para testes",
             validatorCNPJ: "Validador de CNPJ",
@@ -495,7 +505,7 @@
         },
         en: {
             title: "Rule of Three Calculator",
-            about: "What is the rule of three?",
+            aboutTitle: "What is the rule of three?",
             aboutText: "The rule of three is a mathematical method for solving proportion problems between quantities. With three known values, we can find the fourth unknown value.",
             usage: "What is this calculator for?",
             usage1: "Solving math problems",
@@ -521,11 +531,13 @@
             interestCalc: "Interest Calculator",
             interestCalcDescription: "Calculate simple and compound interest for investments",
             tools: "Other tools",
-            footer: "© 2025 AllHelp.online | Education and Finance Tools.",
             generateCPF: "CPF Generator",
             generateCPFDescription: "Generate valid CPFs for testing",
             validatorCNPJ: "CNPJ Validator",
             validatorCNPJDescription: "Check if a CNPJ is valid",
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Privacy Policy",
+            termsLink: "Terms of Use",
         }
     };
 

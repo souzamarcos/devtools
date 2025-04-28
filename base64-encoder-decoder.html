@@ -91,6 +91,15 @@
             font-size: 1rem;
             width: 100%;
         }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        footer p {
+            margin: 0;
+        }
         /* */
         /* Menu */
         nav {
@@ -230,7 +239,8 @@
         <button onclick="switchLang('en')">EN</button>
     </div>
     <nav>
-        <a href="./" data-i18n="tools">Outras ferramentas</a>
+        <a href="./" data-i18n="tools">Ferramentas</a>
+        <a href="./sobre" data-i18n="about">Sobre</a>
     </nav>
     <h1 data-i18n="title">Codificador Base64</h1>
     <div style="text-align:center">
@@ -266,9 +276,7 @@
              data-full-width-responsive="true"></ins>
     </div>
     <footer>
-        <p style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
-            © 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.
-        </p>
+        <p><span data-i18n="footer">&copy; 2025 AllHelp.online | </span><a href="./politica-de-privacidade" data-i18n="privacyLink">Política de Privacidade</a> | <a href="./termos-de-uso" data-i18n="termsLink">Termos de Uso</a></p>
     </footer>
 </div>
 
@@ -286,7 +294,7 @@
             resultLabel: "Resultado:",
             encodeButton: "Codificar para Base64",
             decodeButton: "Decodificar de Base64",
-            tools: "Outras ferramentas",
+            tools: "Ferramentas",
             copy: "Copiar",
             clear: "Limpar",
             copySuccess: "Texto copiado!",
@@ -306,7 +314,10 @@
             clear: "Clear",
             copySuccess: "Text copied!",
             copyError: "Error copying text!",
-            invalidBase64: "Invalid text for Base64 decoding"
+            invalidBase64: "Invalid text for Base64 decoding",
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Privacy Policy",
+            termsLink: "Terms of Use",
         }
     };
 

@@ -105,6 +105,15 @@
             text-align: center;
             font-weight: bold;
         }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        footer p {
+            margin: 0;
+        }
         /* */
         /* Menu */
         nav {
@@ -326,12 +335,11 @@
         <button onclick="switchLang('en')">EN</button>
     </div>
     <nav>
-        <a href="./" data-i18n="tools">Outras ferramentas</a>
+        <a href="./" data-i18n="tools">Ferramentas</a>
+        <a href="./sobre" data-i18n="about">Sobre</a>
     </nav>
     <h1 data-i18n="cpf">Gerador de CPF</h1>
     <div class="gerar-cpf" style="text-align:center">
-
-
         <button class="generate-button" onclick="generateCPF()">
             <span class="icon">🔄</span> <span data-i18n="generateCPF">Gerar CPF</span>
         </button>
@@ -358,7 +366,7 @@
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
         <div class="content-section">
-            <h2 data-i18n="about">O que é um CPF?</h2>
+            <h2 data-i18n="aboutTitle">O que é um CPF?</h2>
             <p data-i18n="aboutText">O CPF (Cadastro de Pessoas Físicas) é um documento brasileiro utilizado para identificação fiscal. Nosso gerador cria números válidos apenas para fins de teste e desenvolvimento.</p>
 
             <h2 data-i18n="usage">Para que serve este gerador?</h2>
@@ -410,9 +418,7 @@
         </div>
     </div>
     <footer>
-        <p data-i18n="footer" style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
-            © 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.
-        </p>
+        <p><span data-i18n="footer">&copy; 2025 AllHelp.online | </span><a href="./politica-de-privacidade" data-i18n="privacyLink">Política de Privacidade</a> | <a href="./termos-de-uso" data-i18n="termsLink">Termos de Uso</a></p>
     </footer>
 </div>
 
@@ -428,14 +434,15 @@
             description: "Ferramenta pra geração rápida de CPF para testes locais de desenvolvedores em suas aplicações.",
             checkOtherTool: "Veja nossa ferramenta para validar CPF",
             cpf: "Gerador de CPF",
-            tools: "Outras ferramentas",
+            tools: "Ferramentas",
+            about: "Sobre",
             generateCPF: "Gerar CPF",
             formatCPF: "Gerar com ponto e traço",
             copy: "Copiar",
             clear: "Limpar",
             copySuccess: "CPF copiado!",
             copyError: "Erro ao copiar CPF!",
-            about: "O que é um CPF?",
+            aboutTitle: "O que é um CPF?",
             aboutText: "O CPF (Cadastro de Pessoas Físicas) é um documento brasileiro utilizado para identificação fiscal. Nosso gerador cria números válidos apenas para fins de teste e desenvolvimento.",
             usage: "Para que serve este gerador?",
             usage1: "Testes de software e aplicativos",
@@ -453,7 +460,9 @@
             validatorCPFDescription: "Verifique se um CPF é válido de acordo com as regras oficiais",
             generateCNPJ: "Gerador de CNPJ",
             generateCNPJDescription: "Crie CNPJs válidos para testes de sistemas",
-            footer: "© 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.",
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Política de Privacidade",
+            termsLink: "Termos de Uso",
             formatOption: "Adicionar ponto e traço",
         },
         en: {
@@ -463,13 +472,14 @@
             checkOtherTool: "Check our tool to validate CPF",
             cpf: "CPF Generator",
             tools: "Other tools",
+            about: "About",
             generateCPF: "Generate CPF Now",
             formatCPF: "Generate with dots and dashes",
             copy: "Copy",
             clear: "Clear",
             copySuccess: "CPF copied!",
             copyError: "Error copying CPF!",
-            about: "What is a CPF?",
+            aboutTitle: "What is a CPF?",
             aboutText: "The CPF (Cadastro de Pessoas Físicas) is a Brazilian document used for tax identification. Our generator creates valid numbers only for testing and development purposes.",
             usage: "What is this generator for?",
             usage1: "Software and application testing",
@@ -487,8 +497,10 @@
             validatorCPFDescription: "Check if a CPF is valid according to official rules",
             generateCNPJ: "CNPJ Generator",
             generateCNPJDescription: "Create valid CNPJs for system testing",
-            footer: "© 2025 AllHelp.online | Developer Tools. Exclusive use for testing purposes.",
             formatOption: "Add dots and dashes",
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Privacy Policy",
+            termsLink: "Terms of Use",
         }
     };
 

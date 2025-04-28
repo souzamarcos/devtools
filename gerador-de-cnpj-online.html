@@ -104,6 +104,15 @@
             text-align: center;
             font-weight: bold;
         }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        footer p {
+            margin: 0;
+        }
         /* Menu */
         nav {
             display: flex;
@@ -303,7 +312,8 @@
         <button onclick="switchLang('en')">EN</button>
     </div>
     <nav>
-        <a href="./" data-i18n="tools">Outras ferramentas</a>
+        <a href="./" data-i18n="tools">Ferramentas</a>
+        <a href="./sobre" data-i18n="about">Sobre</a>
     </nav>
     <h1 data-i18n="cnpj">Gerador de CNPJ</h1>
     <div class="gerar-cnpj" style="text-align:center">
@@ -331,7 +341,7 @@
                  data-full-width-responsive="true"></ins>
         </div>
         <div class="content-section">
-            <h2 data-i18n="about">O que é um CNPJ?</h2>
+            <h2 data-i18n="aboutTitle">O que é um CNPJ?</h2>
             <p data-i18n="aboutText">O CNPJ (Cadastro Nacional da Pessoa Jurídica) é um número único que identifica uma empresa perante a Receita Federal. Nosso gerador cria números válidos apenas para fins de teste e desenvolvimento.</p>
 
             <h2 data-i18n="usage">Para que serve este gerador?</h2>
@@ -383,9 +393,7 @@
     </div>
 
     <footer>
-        <p data-i18n="footer" style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
-            © 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.
-        </p>
+        <p><span data-i18n="footer">&copy; 2025 AllHelp.online | </span><a href="./politica-de-privacidade" data-i18n="privacyLink">Política de Privacidade</a> | <a href="./termos-de-uso" data-i18n="termsLink">Termos de Uso</a></p>
     </footer>
 </div>
 
@@ -398,14 +406,15 @@
         pt: {
             title: "Ferramentas para Devs",
             cnpj: "Gerador de CNPJ",
-            tools: "Outras ferramentas",
+            tools: "Ferramentas",
+            about: "Sobre",
             generateCNPJ: "Gerar CNPJ",
             formatCNPJ: "Adicionar formatação (pontos, barra e traço)",
             copy: "Copiar",
             clear: "Limpar",
             copySuccess: "CNPJ copiado!",
             copyError: "Erro ao copiar CNPJ!",
-            about: "O que é um CNPJ?",
+            aboutTitle: "O que é um CNPJ?",
             aboutText: "O CNPJ (Cadastro Nacional da Pessoa Jurídica) é um número único que identifica uma empresa perante a Receita Federal. Nosso gerador cria números válidos apenas para fins de teste e desenvolvimento.",
             usage: "Para que serve este gerador?",
             usage1: "Testes de sistemas empresariais",
@@ -423,20 +432,23 @@
             generateCPFDescription: "Gere CPFs válidos para testes",
             validatorCNPJ: "Validador de CNPJ",
             validatorCNPJDescription: "Verifique se um CNPJ é válido",
-            footer: "© 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.",
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Política de Privacidade",
+            termsLink: "Termos de Uso",
             formatOption: "Adicionar formatação (pontos, barra e traço)",
         },
         en: {
             title: "Dev Tools",
             cnpj: "CNPJ Generator",
             tools: "Other tools",
+            about: "About",
             generateCNPJ: "Generate CNPJ Now",
             formatCNPJ: "Add formatting (dots, slash and dash)",
             copy: "Copy",
             clear: "Clear",
             copySuccess: "CNPJ copied!",
             copyError: "Error copying CNPJ!",
-            about: "What is a CNPJ?",
+            aboutTitle: "What is a CNPJ?",
             aboutText: "The CNPJ (National Registry of Legal Entities) is a unique number that identifies a company with the Federal Revenue Service. Our generator creates valid numbers only for testing and development purposes.",
             usage: "What is this generator for?",
             usage1: "Business systems testing",
@@ -454,8 +466,10 @@
             generateCPFDescription: "Generate valid CPFs for testing",
             validatorCNPJ: "CNPJ Validator",
             validatorCNPJDescription: "Check if a CNPJ is valid",
-            footer: "© 2025 AllHelp.online | Developer Tools. Exclusive use for testing purposes.",
             formatOption: "Add formatting (dots, slash and dash)",
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Privacy Policy",
+            termsLink: "Terms of Use",
         }
     };
 

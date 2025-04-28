@@ -96,6 +96,15 @@
             text-align: center;
             font-weight: bold;
         }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        footer p {
+            margin: 0;
+        }
         /* */
         /* Menu */
         nav {
@@ -203,7 +212,8 @@
             <button onclick="switchLang('en')">EN</button>
         </div>
         <nav>
-            <a href="./" data-i18n="tools">Outras ferramentas</a>
+            <a href="./" data-i18n="tools">Ferramentas</a>
+            <a href="./sobre" data-i18n="about">Sobre</a>
         </nav>
 
         <header>
@@ -242,9 +252,7 @@
             </tbody>
         </table>
         <footer>
-            <p style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
-                © 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.
-            </p>
+            <p><span data-i18n="footer">&copy; 2025 AllHelp.online | </span><a href="./politica-de-privacidade" data-i18n="privacyLink">Política de Privacidade</a> | <a href="./termos-de-uso" data-i18n="termsLink">Termos de Uso</a></p>
         </footer>
     </div>
 </body>
@@ -273,7 +281,10 @@
                     name: "Calculadora de Regra de Três",
                     description: "Ferramenta para resolver problemas de proporção usando a regra de três."
                 }
-            ]
+            ],
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Política de Privacidade",
+            termsLink: "Termos de Uso",
         },
         en: {
             items: [
@@ -297,7 +308,10 @@
                     name: "Rule of Three Calculator",
                     description: "Tool to solve proportion problems using the rule of three."
                 }
-            ]
+            ],
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Privacy Policy",
+            termsLink: "Terms of Use",
         }
     };
 

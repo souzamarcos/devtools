@@ -106,6 +106,15 @@
             width: 100%;
             max-width: 300px;
         }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        footer p {
+            margin: 0;
+        }
         /* Menu */
         nav {
             display: flex;
@@ -317,12 +326,13 @@
         <button onclick="switchLang('en')">EN</button>
     </div>
     <nav>
-        <a href="./" data-i18n="tools">Outras ferramentas</a>
+        <a href="./" data-i18n="tools">Ferramentas</a>
+        <a href="./sobre" data-i18n="about">Sobre</a>
     </nav>
     <h1 data-i18n="validateCPF">Validador de CPF</h1>
     <div class="validar-cpf" style="text-align:center">
         <div class="content-section">
-            <h2 data-i18n="about">O que é um CPF?</h2>
+            <h2 data-i18n="aboutTitle">O que é um CPF?</h2>
             <p data-i18n="aboutText">O CPF (Cadastro de Pessoas Físicas) é um documento brasileiro utilizado para identificação fiscal. Nosso validador verifica se um CPF segue as regras oficiais.</p>
 
             <h2 data-i18n="usage">Como usar este validador?</h2>
@@ -391,9 +401,7 @@
     </div>
 
     <footer>
-        <p data-i18n="footer" style="text-align:center; font-size: 0.9rem;margin-top: 1.5rem;">
-            © 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste.
-        </p>
+        <p><span data-i18n="footer">&copy; 2025 AllHelp.online | </span><a href="./politica-de-privacidade" data-i18n="privacyLink">Política de Privacidade</a> | <a href="./termos-de-uso" data-i18n="termsLink">Termos de Uso</a></p>
     </footer>
 </div>
 
@@ -405,14 +413,15 @@
     const i18n = {
         pt: {
             validateCPF: "Validador de CPF",
-            about: "O que é um CPF?",
+            aboutTitle: "O que é um CPF?",
             aboutText: "O CPF (Cadastro de Pessoas Físicas) é um documento brasileiro utilizado para identificação fiscal. Nosso validador verifica se um CPF segue as regras oficiais.",
             usage: "Como usar este validador?",
             usage1: "Cole o CPF gerado para verificar sua validade",
             usage2: "Teste sistemas que exigem validação de CPF",
             usage3: "Verifique CPFs em formulários de desenvolvimento",
             disclaimer: "Dica: Use nosso gerador de CPF para criar números válidos para teste.",
-            tools: "Outras ferramentas",
+            tools: "Ferramentas",
+            about: "Sobre",
             validate: "Validar CPF",
             enterCPF: "Digite o CPF",
             validCPF: "CPF válido!",
@@ -428,11 +437,13 @@
             generateCPFDescription: "Gere CPFs válidos para testes",
             validatorCNPJ: "Validador de CNPJ",
             validatorCNPJDescription: "Verifique se um CNPJ é válido",
-            footer: "© 2025 AllHelp.online | Ferramentas para Desenvolvedores. Uso exclusivo para fins de teste."
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Política de Privacidade",
+            termsLink: "Termos de Uso",
         },
         en: {
             validateCPF: "CPF Validator",
-            about: "What is a CPF?",
+            aboutTitle: "What is a CPF?",
             aboutText: "The CPF (Cadastro de Pessoas Físicas) is a Brazilian document used for tax identification. Our validator checks if a CPF follows the official rules.",
             usage: "How to use this validator?",
             usage1: "Paste the generated CPF to check its validity",
@@ -440,6 +451,7 @@
             usage3: "Check CPFs in development forms",
             disclaimer: "Tip: Use our CPF generator to create valid numbers for testing.",
             tools: "Other tools",
+            about: "About",
             validate: "Validate CPF",
             enterCPF: "Enter CPF",
             validCPF: "Valid CPF!",
@@ -455,7 +467,9 @@
             generateCPFDescription: "Generate valid CPFs for testing",
             validatorCNPJ: "CNPJ Validator",
             validatorCNPJDescription: "Check if a CNPJ is valid",
-            footer: "© 2025 AllHelp.online | Developer Tools. Exclusive use for testing purposes."
+            footer: "© 2025 AllHelp.online | ",
+            privacyLink: "Privacy Policy",
+            termsLink: "Terms of Use",
         }
     };
 
