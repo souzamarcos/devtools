@@ -58,11 +58,14 @@ input, button, textarea {
     padding: 0.5rem 1rem;
 }
 
-input, textarea {
-    border: 1px solid var(--border-color);
-    width: 100%;
-    max-width: 300px;
+input {
+    position: relative;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 button {
