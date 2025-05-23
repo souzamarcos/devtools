@@ -29,6 +29,47 @@
     <link rel="icon" href="https://allhelp.online/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="https://allhelp.online/favicon.ico" type="image/x-icon">
 
+    <!-- Keywords -->
+    <meta name="keywords" content="ferramentas online, gerador cpf, validador cpf, gerador cnpj, validador cnpj, ferramentas para desenvolvedores">
+
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AllHelp.online">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Performance optimizations -->
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/js/general.js" as="script">
+    <link rel="dns-prefetch" href="https://allhelp.online">
+    <link rel="preconnect" href="https://allhelp.online">
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AllHelp.online",
+        "url": "https://allhelp.online",
+        "logo": "https://allhelp.online/img/allhelp.png",
+        "description": "Ferramentas online gratuitas para desenvolvedores e profissionais de TI"
+    }
+    </script>
+
+    <!-- Structured Data - WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AllHelp.online",
+        "url": "https://allhelp.online",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://allhelp.online/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
         {
@@ -207,46 +248,48 @@
             <button onclick="switchLang('pt')">PT</button>
             <button onclick="switchLang('en')">EN</button>
         </div>
-        <nav>
-            <a href="./" data-i18n="tools">Ferramentas</a>
-            <a href="./sobre" data-i18n="about">Sobre</a>
-        </nav>
-
         <header>
+            <nav aria-label="Navegação principal">
+                <a href="./" data-i18n="tools">Ferramentas</a>
+                <a href="./sobre" data-i18n="about">Sobre</a>
+            </nav>
+        </header>
+
+        <main>
             <h1 data-i18n="toolsTitle">Lista de Ferramentas Gratuitas</h1>
             <p data-i18n="description">Explore ferramentas úteis para o dia a dia, ideais para desenvolvedores, testers e profissionais de diversas áreas.</p>
-        </header>
-        <input type="text" id="filter" placeholder="Filtrar itens..." data-placeholder-i18n="filterPlaceholder" />
-        <table>
-            <thead>
-                <tr>
-                    <th data-i18n="tableColumnItem">Item</th>
-                    <th data-i18n="tableColumnDescription">Descrição</th>
-                </tr>
-            </thead>
-            <tbody id="itemTable">
-                <tr>
-                    <td><a href="gerador-de-cpf-online" data-i18n="items[0].name">Gerador de CPF</a></td>
-                    <td><a href="gerador-de-cpf-online" data-i18n="items[0].description">Ferramenta para gerar CPF válido.</a></td>
-                </tr>
-                <tr>
-                    <td><a href="validador-de-cpf-online" data-i18n="items[1].name">Validador de CPF</a></td>
-                    <td><a href="validador-de-cpf-online" data-i18n="items[1].description">Ferramenta para validar CPF</a></td>
-                </tr>
-                <tr>
-                    <td><a href="gerador-de-cnpj-online" data-i18n="items[2].name">CNPJ Generator</a></td>
-                    <td><a href="gerador-de-cnpj-online" data-i18n="items[2].description">Tool to generate valid CNPJs for testing purposes.</a></td>
-                </tr>
-                <tr>
-                    <td><a href="base64-encoder-decoder" data-i18n="items[3].name">Codificador Base64</a></td>
-                    <td><a href="base64-encoder-decoder" data-i18n="items[3].description">Ferramenta para codificar e decodificar texto em Base64.</a></td>
-                </tr>
-                <tr>
-                    <td><a href="calculadora-regra-tres-simples" data-i18n="items[4].name">Rule of Three Calculator</a></td>
-                    <td><a href="calculadora-regra-tres-simples" data-i18n="items[4].description">Tool to solve proportion problems using the rule of three.</a></td>
-                </tr>
-            </tbody>
-        </table>
+            <input type="text" id="filter" placeholder="Filtrar itens..." data-placeholder-i18n="filterPlaceholder" />
+            <table>
+                <thead>
+                    <tr>
+                        <th data-i18n="tableColumnItem">Item</th>
+                        <th data-i18n="tableColumnDescription">Descrição</th>
+                    </tr>
+                </thead>
+                <tbody id="itemTable">
+                    <tr>
+                        <td><a href="gerador-de-cpf-online" data-i18n="items[0].name">Gerador de CPF</a></td>
+                        <td><a href="gerador-de-cpf-online" data-i18n="items[0].description">Ferramenta para gerar CPF válido.</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="validador-de-cpf-online" data-i18n="items[1].name">Validador de CPF</a></td>
+                        <td><a href="validador-de-cpf-online" data-i18n="items[1].description">Ferramenta para validar CPF</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="gerador-de-cnpj-online" data-i18n="items[2].name">CNPJ Generator</a></td>
+                        <td><a href="gerador-de-cnpj-online" data-i18n="items[2].description">Tool to generate valid CNPJs for testing purposes.</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="base64-encoder-decoder" data-i18n="items[3].name">Codificador Base64</a></td>
+                        <td><a href="base64-encoder-decoder" data-i18n="items[3].description">Ferramenta para codificar e decodificar texto em Base64.</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="calculadora-regra-tres-simples" data-i18n="items[4].name">Rule of Three Calculator</a></td>
+                        <td><a href="calculadora-regra-tres-simples" data-i18n="items[4].description">Tool to solve proportion problems using the rule of three.</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
         <footer>
             <p><span data-i18n="footer">&copy; 2025 AllHelp.online | </span><a href="./politica-de-privacidade" data-i18n="privacyLink">Política de Privacidade</a> | <a href="./termos-de-uso" data-i18n="termsLink">Termos de Uso</a></p>
         </footer>
@@ -329,3 +372,4 @@
 </script>
 
 </html>
+

@@ -27,6 +27,18 @@
     <link rel="icon" href="https://allhelp.online/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="https://allhelp.online/favicon.ico" type="image/x-icon">
 
+    <!-- Additional Meta Tags -->
+    <meta name="keywords" content="validador cpf, verificar cpf, validação cpf online, ferramenta validar cpf">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AllHelp.online">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Performance optimizations -->
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/js/general.js" as="script">
+    <link rel="dns-prefetch" href="https://allhelp.online">
+    <link rel="preconnect" href="https://allhelp.online">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
         {
@@ -49,6 +61,7 @@
         }
     </script>
 
+    <link rel="stylesheet" href="/css/style.css">
     <style>
         /* Geral */
         * {
@@ -384,140 +397,4 @@
         <h3 data-i18n="relatedTools">Ferramentas relacionadas</h3>
         <div class="tool-cards">
             <a href="./gerador-de-cpf-online" class="tool-card">
-                <div class="tool-icon">🔄</div>
-                <div class="tool-content">
-                    <h4 data-i18n="generateCPF">Gerador de CPF</h4>
-                    <p data-i18n="generateCPFDescription">Gere CPFs válidos para testes</p>
-                </div>
-            </a>
-            <a href="./validador-de-cnpj-online" class="tool-card">
-                <div class="tool-icon">🏢</div>
-                <div class="tool-content">
-                    <h4 data-i18n="validatorCNPJ">Validador de CNPJ</h4>
-                    <p data-i18n="validatorCNPJDescription">Verifique se um CNPJ é válido</p>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <footer>
-        <p><span data-i18n="footer">&copy; 2025 AllHelp.online | </span><a href="./politica-de-privacidade" data-i18n="privacyLink">Política de Privacidade</a> | <a href="./termos-de-uso" data-i18n="termsLink">Termos de Uso</a></p>
-    </footer>
-</div>
-
-<!-- Scripts -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8817189280217840"
-        crossorigin="anonymous"></script>
-<script src="js/general.js"></script>
-<script>
-    const i18n = {
-        pt: {
-            validateCPF: "Validador de CPF",
-            aboutTitle: "O que é um CPF?",
-            aboutText: "O CPF (Cadastro de Pessoas Físicas) é um documento brasileiro utilizado para identificação fiscal. Nosso validador verifica se um CPF segue as regras oficiais.",
-            usage: "Como usar este validador?",
-            usage1: "Cole o CPF gerado para verificar sua validade",
-            usage2: "Teste sistemas que exigem validação de CPF",
-            usage3: "Verifique CPFs em formulários de desenvolvimento",
-            disclaimer: "Dica: Use nosso gerador de CPF para criar números válidos para teste.",
-            tools: "Ferramentas",
-            about: "Sobre",
-            validate: "Validar CPF",
-            enterCPF: "Digite o CPF",
-            validCPF: "CPF válido!",
-            invalidCPF: "CPF inválido!",
-            faqTitle: "Perguntas Frequentes",
-            faq1: "O validador verifica se o CPF existe?",
-            faq1Text: "Não, apenas verificamos se o número segue o algoritmo oficial. Não temos acesso aos registros da Receita Federal.",
-            faq2: "Posso validar CPFs formatados?",
-            faq2Text: "Sim, nosso validador reconhece CPFs no formato 000.000.000-00 ou apenas os números.",
-            faq3: "Como gerar CPFs válidos?",
-            faq3Text: "Use nosso gerador de CPF para criar números válidos para testes.",
-            generateCPF: "Gerador de CPF",
-            generateCPFDescription: "Gere CPFs válidos para testes",
-            validatorCNPJ: "Validador de CNPJ",
-            validatorCNPJDescription: "Verifique se um CNPJ é válido",
-            footer: "© 2025 AllHelp.online | ",
-            privacyLink: "Política de Privacidade",
-            termsLink: "Termos de Uso",
-        },
-        en: {
-            validateCPF: "CPF Validator",
-            aboutTitle: "What is a CPF?",
-            aboutText: "The CPF (Cadastro de Pessoas Físicas) is a Brazilian document used for tax identification. Our validator checks if a CPF follows the official rules.",
-            usage: "How to use this validator?",
-            usage1: "Paste the generated CPF to check its validity",
-            usage2: "Test systems that require CPF validation",
-            usage3: "Check CPFs in development forms",
-            disclaimer: "Tip: Use our CPF generator to create valid numbers for testing.",
-            tools: "Other tools",
-            about: "About",
-            validate: "Validate CPF",
-            enterCPF: "Enter CPF",
-            validCPF: "Valid CPF!",
-            invalidCPF: "Invalid CPF!",
-            faqTitle: "Frequently Asked Questions",
-            faq1: "Does the validator check if the CPF exists?",
-            faq1Text: "No, we only check if the number follows the official algorithm. We don't have access to Federal Revenue records.",
-            faq2: "Can I validate formatted CPFs?",
-            faq2Text: "Yes, our validator recognizes CPFs in the format 000.000.000-00 or just the numbers.",
-            faq3: "How to generate valid CPFs?",
-            faq3Text: "Use our CPF generator to create valid numbers for testing.",
-            generateCPF: "CPF Generator",
-            generateCPFDescription: "Generate valid CPFs for testing",
-            validatorCNPJ: "CNPJ Validator",
-            validatorCNPJDescription: "Check if a CNPJ is valid",
-            footer: "© 2025 AllHelp.online | ",
-            privacyLink: "Privacy Policy",
-            termsLink: "Terms of Use",
-        }
-    };
-
-    window.onload = () => switchLang('pt');
-
-    function validateCPF() {
-        const cpf = document.getElementById('cpfInput').value.replace(/\D/g, '');
-        const resultBox = document.getElementById('result');
-        const resultText = document.getElementById('resultText');
-
-        if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
-            resultText.innerText = i18n[document.documentElement.lang].invalidCPF;
-            resultBox.className = "result-box invalid";
-            resultBox.style.display = "block";
-            return;
-        }
-
-        let sum = 0, remainder;
-        for (let i = 1; i <= 9; i++) sum += parseInt(cpf[i - 1]) * (11 - i);
-        remainder = (sum * 10) % 11;
-        if (remainder === 10 || remainder === 11) remainder = 0;
-        if (remainder !== parseInt(cpf[9])) {
-            resultText.innerText = i18n[document.documentElement.lang].invalidCPF;
-            resultBox.className = "result-box invalid";
-            resultBox.style.display = "block";
-            return;
-        }
-
-        sum = 0;
-        for (let i = 1; i <= 10; i++) sum += parseInt(cpf[i - 1]) * (12 - i);
-        remainder = (sum * 10) % 11;
-        if (remainder === 10 || remainder === 11) remainder = 0;
-
-        if (remainder === parseInt(cpf[10])) {
-            resultText.innerText = i18n[document.documentElement.lang].validCPF;
-            resultBox.className = "result-box valid";
-        } else {
-            resultText.innerText = i18n[document.documentElement.lang].invalidCPF;
-            resultBox.className = "result-box invalid";
-        }
-        resultBox.style.display = "block";
-    }
-
-    function clearResult() {
-        document.getElementById('result').style.display = "none";
-    }
-
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</body>
-</html>
+                <div class="tool-icon">

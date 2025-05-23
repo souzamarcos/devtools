@@ -1,55 +1,84 @@
-/* Geral */
+/* Base */
+:root {
+    --primary-color: #333;
+    --bg-color: #fafafa;
+    --text-color: #333;
+    --border-color: #ccc;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* Typography */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
-    background-color: #fafafa;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     padding: 1rem;
 }
+
+/* Layout */
 .container {
     max-width: 720px;
     margin: 0 auto;
     padding: 2rem 1rem;
     background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px var(--shadow-color);
     border-radius: 8px;
     position: relative;
 }
-h1 {
-    font-size: 2rem;
+
+/* Headings */
+h1, h2, h3 {
     margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 600;
     text-align: center;
 }
+
 h2 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: clamp(1rem, 3vw, 1.1rem);
     font-weight: 500;
 }
-#ads-bottom {
-    margin-top: 2rem;
-    text-align: center;
-}
-#ads-center {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-input {
-    position: relative;
-    padding: 1rem;
-    border: 1px solid #ccc;
+
+/* Forms */
+input, button, textarea {
+    font: inherit;
     border-radius: 5px;
-    font-size: 1rem;
-    text-align: center;
-    font-weight: bold;
+    padding: 0.5rem 1rem;
 }
-/* */
-/* Menu */
+
+input, textarea {
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background-color: #444;
+}
+
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -57,69 +86,103 @@ nav {
     margin-bottom: 2rem;
     flex-wrap: wrap;
 }
-nav .dropdown {
-    position: relative;
-    display: inline-block;
-}
-nav .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 1;
-    border-radius: 6px;
-    padding: 0.5rem 0;
-}
-nav .dropdown:hover .dropdown-content {
-    display: block;
-}
-nav .dropdown-content a {
-    display: block;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    color: #333;
-}
-nav .dropdown-content a:hover {
-    background-color: #f0f0f0;
-}
+
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s;
 }
+
 nav a:hover {
     background-color: #e0e0e0;
 }
-/* */
-/* Idiomas */
+
+/* Components */
+.content-section {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.tool-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tool-card {
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tool-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tool-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+
+/* Ad spaces */
+#ads-bottom, #ads-center {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* Language switcher */
 .lang-switcher {
     position: absolute;
     top: 1rem;
     right: 1rem;
 }
+
 .lang-switcher button {
     margin-left: 0.5rem;
     padding: 0.3rem 0.6rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
     background-color: #e0e0e0;
+    font-weight: 500;
 }
+
 .lang-switcher button:hover {
     background-color: #ccc;
 }
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-/* */
+

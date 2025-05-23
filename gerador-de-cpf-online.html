@@ -27,28 +27,37 @@
     <link rel="icon" href="https://allhelp.online/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="https://allhelp.online/favicon.ico" type="image/x-icon">
 
-
     <!-- Structured Data -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Gerador de CPF Válido",
-            "description": "Ferramenta online gratuita para gerar CPFs válidos para testes de desenvolvimento",
-            "url": "https://allhelp.online/gerador-de-cpf-online",
-            "applicationCategory": "DeveloperApplication",
-            "operatingSystem": "Any",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "BRL"
-            },
-            "creator": {
-                "@type": "Organization",
-                "name": "AllHelp"
-            }
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Gerador de CPF Online",
+        "url": "https://allhelp.online/gerador-de-cpf-online",
+        "description": "Ferramenta online gratuita para gerar CPFs válidos para testes e desenvolvimento",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "AllHelp.online"
         }
+    }
     </script>
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/js/general.js" as="script">
+
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="https://allhelp.online">
+    <link rel="preconnect" href="https://allhelp.online">
+
+    <link rel="stylesheet" href="/css/style.css">
 
     <style>
         /* Geral */
