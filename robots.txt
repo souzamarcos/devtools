@@ -1,11 +1,37 @@
 User-agent: *
 Allow: /
-Disallow: /js/
-Disallow: /css/
-Disallow: /img/
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+# Principais páginas
+Allow: /
+Allow: /gerador-cpf
+Allow: /validador-cpf
+Allow: /gerador-cnpj
+Allow: /validador-cnpj
+Allow: /base64
+Allow: /regra-tres
+Allow: /sobre
+Allow: /privacidade
+Allow: /termos
 
 # Sitemap
 Sitemap: https://allhelp.online/sitemap.xml
 
-# Crawl-delay
+# Configurações específicas para bots principais
+User-agent: Googlebot
 Crawl-delay: 1
+
+User-agent: bingbot
+Crawl-delay: 2
+
+# Otimizações para mobile
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bloquear páginas temporárias ou de teste
+Disallow: /temp/
+Disallow: /test/
+Disallow: /*.tmp$
+Disallow: /*.test$

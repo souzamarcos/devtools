@@ -2,61 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://allhelp.online/</loc>
-        <lastmod>2025-05-22</lastmod>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://allhelp.online/gerador-de-cpf-online</loc>
-        <lastmod>2025-05-22</lastmod>
+        <loc>https://allhelp.online/gerador-cpf</loc>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://allhelp.online/validador-de-cpf-online</loc>
-        <lastmod>2025-05-22</lastmod>
+        <loc>https://allhelp.online/validador-cpf</loc>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://allhelp.online/gerador-de-cnpj-online</loc>
-        <lastmod>2025-05-22</lastmod>
+        <loc>https://allhelp.online/gerador-cnpj</loc>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://allhelp.online/validador-de-cnpj-online</loc>
-        <lastmod>2025-05-22</lastmod>
+        <loc>https://allhelp.online/validador-cnpj</loc>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://allhelp.online/base64-encoder-decoder</loc>
-        <lastmod>2025-05-22</lastmod>
+        <loc>https://allhelp.online/base64</loc>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://allhelp.online/calculadora-regra-tres-simples</loc>
-        <lastmod>2025-05-22</lastmod>
+        <loc>https://allhelp.online/regra-tres</loc>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://allhelp.online/sobre</loc>
-        <lastmod>2025-05-22</lastmod>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://allhelp.online/politica-de-privacidade</loc>
-        <lastmod>2025-05-22</lastmod>
+        <loc>https://allhelp.online/privacidade</loc>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://allhelp.online/termos-de-uso</loc>
-        <lastmod>2025-05-22</lastmod>
+        <loc>https://allhelp.online/termos</loc>
+        <lastmod>2025-05-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
