@@ -14,6 +14,14 @@
     padding: 0;
 }
 
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
 /* Typography */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -47,8 +55,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1rem, 3vw, 1.1rem);
-    font-weight: 500;
+    font-size: 1.5em;
 }
 
 /* Forms */
@@ -68,6 +75,15 @@ input {
     font-weight: bold;
 }
 
+#cnpj {
+            margin-top: 1rem;
+            margin-right: 2rem;
+            margin-left: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
 button {
     cursor: pointer;
     border: none;
@@ -79,6 +95,22 @@ button {
 button:hover {
     transform: translateY(-1px);
     background-color: #444;
+}
+
+button.validate {
+    background-color: #333333;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+button.validate:hover {
+    background-color: #218838;
+    transform: scale(1.05);
 }
 
 /* Navigation */
@@ -111,28 +143,75 @@ nav a:hover {
     margin: 1rem 0;
 }
 
+
+
+
+.faq-section {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+}
+.related-tools {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+.related-tools h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #333;
+}
 .tool-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
 }
-
 .tool-card {
+    display: flex;
+    flex-direction: column;
     background: #fff;
-    padding: 1.2rem;
+    border: 1px solid #e0e0e0;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
-    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 1.2rem;
     text-decoration: none;
-    color: inherit;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
-
 .tool-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px var(--shadow-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: #333333;
 }
-
+.tool-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+.tool-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333333;
+    text-align: center;
+}
+.tool-content p {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 0;
+}
 /* Footer */
 footer {
     margin-top: 2rem;

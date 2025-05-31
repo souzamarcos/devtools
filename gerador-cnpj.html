@@ -97,262 +97,6 @@
     <link rel="shortcut icon" href="https://allhelp.online/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/style.css">
-
-    <style>
-        /* Geral */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #fafafa;
-            color: #333;
-            padding: 1rem;
-        }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-            background-color: #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-            position: relative;
-        }
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            text-align: center;
-        }
-        h2 {
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        ul {
-            margin-bottom: 1rem;
-        }
-        #ads-bottom {
-            margin-top: 2rem;
-            text-align: center;
-        }
-        #ads-center {
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        input {
-            position: relative;
-            padding: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            text-align: center;
-            font-weight: bold;
-        }
-        footer {
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-        }
-        footer p {
-            margin: 0;
-        }
-        /* Menu */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-        nav .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        nav .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 160px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 6px;
-            padding: 0.5rem 0;
-        }
-        nav .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        nav .dropdown-content a {
-            display: block;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            color: #333;
-        }
-        nav .dropdown-content a:hover {
-            background-color: #f0f0f0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.2s ease;
-        }
-        nav a:hover {
-            background-color: #e0e0e0;
-        }
-        /* Idiomas */
-        .lang-switcher {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-        }
-        .lang-switcher button {
-            margin-left: 0.5rem;
-            padding: 0.3rem 0.6rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 500;
-            background-color: #e0e0e0;
-        }
-        .lang-switcher button:hover {
-            background-color: #ccc;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            h1 {
-                font-size: 1.5rem;
-            }
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        /* Conteúdo */
-        .content-section {
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-        .faq-section {
-            margin-top: 1rem;
-            padding: 1rem;
-        }
-        .faq-item {
-            margin-bottom: 1.5rem;
-        }
-        /* Botões e resultados */
-        .gerar-cnpj button {
-            background-color: #333333;
-            color: white;
-            border: none;
-            padding: 0.6rem 1.2rem;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .gerar-cnpj button:hover {
-            background-color: #218838;
-            transform: scale(1.05);
-        }
-        .generate-button {
-            margin-bottom: 1rem;
-        }
-        button.action {
-            margin-top: 2rem;
-        }
-        #cnpj {
-            margin-top: 1rem;
-            margin-right: 2rem;
-            margin-left: 2rem;
-            font-size: 1.5rem;
-            text-align: center;
-            font-weight: bold;
-        }
-        p.format-option {
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        p.format-option input {
-            vertical-align: middle;
-        }
-        .ads {
-            margin-top: 2rem;
-            text-align: center;
-        }
-        /* Ferramentas relacionadas */
-        .related-tools {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            padding: 1rem;
-        }
-        .related-tools h3 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-            color: #333;
-        }
-        .tool-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .tool-card {
-            display: flex;
-            flex-direction: column;
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 1.2rem;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .tool-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-color: #333333;
-        }
-        .tool-icon {
-            font-size: 1.8rem;
-            margin-bottom: 0.8rem;
-            text-align: center;
-        }
-        .tool-content h4 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            color: #333333;
-            text-align: center;
-        }
-        .tool-content p {
-            font-size: 0.85rem;
-            color: #666;
-            text-align: center;
-            margin-bottom: 0;
-        }
-        @media (max-width: 600px) {
-            .tool-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -371,7 +115,7 @@
         </button>
         <p class="format-option">
             <input type="checkbox" id="formatCNPJ" aria-label="Formatar" onclick="isCNPJEmpty() ? null : generateCNPJ()" checked />
-            <span data-i18n="formatOption">Adicionar formatação (pontos, barra e traço)</span>
+            <span data-i18n="formatOption">Adicionar formatação</span>
         </p>
         <div id="result" style="margin-top: 1rem; font-size: 1.5rem; text-align: center; font-weight: bold;">
             <div id="cnpj"
@@ -460,7 +204,7 @@
             tools: "Ferramentas",
             about: "Sobre",
             generateCNPJ: "Gerar CNPJ",
-            formatCNPJ: "Adicionar formatação (pontos, barra e traço)",
+            formatCNPJ: "Adicionar formatação",
             copy: "Copiar",
             clear: "Limpar",
             copySuccess: "CNPJ copiado!",
@@ -486,7 +230,7 @@
             footer: "© 2025 AllHelp.online | ",
             privacyLink: "Política de Privacidade",
             termsLink: "Termos de Uso",
-            formatOption: "Adicionar formatação (pontos, barra e traço)",
+            formatOption: "Adicionar formatação",
         },
         en: {
             title: "Dev Tools",
